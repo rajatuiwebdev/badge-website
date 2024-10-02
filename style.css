@@ -1,0 +1,74 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+  font-family: "Poppins", sans-serif;
+  color: #dfe1e5;
+  font-family: sans-serif; /* Choose a modern font */
+  margin: 0; /* Remove default margin */
+  overflow: hidden;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 95.5vh;
+}
+
+.badge img {
+  width: 250px; /* Adjust image size as needed */
+  height: 250px;
+}
+
+.badge img:hover {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Hover effect for text */
+.badge-details h2:hover {
+  color: #e8d07e;
+  transition: color 0.3s ease-in-out;
+}
+
+.badge-details {
+  text-align: center;
+  margin-top: 15px; /* Adjust spacing */
+}
+
+.badge-details h2 {
+  font-size: 24px; /* Increase heading size */
+  margin-bottom: 5px; /* Add spacing between heading and text */
+  color: #fff; /* White heading for better contrast */
+}
+
+.badge-details p {
+  font-size: 18px; /* Adjust paragraph size */
+  margin: 0; /* Remove default margin for tighter spacing */
+}
+
+.badge-details strong {
+  color: #e8d07e; /* Accent color for awardee email */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+  color: #dfe1e5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px solid #58a6ff;
+}
