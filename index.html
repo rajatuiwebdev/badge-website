@@ -8,8 +8,12 @@
   body {
     background-color: #212529; /* Dark background */
     color: #dfe1e5; /* Light text color */
-    font-family: sans-serif; /* Choose a modern font */
+    font-family: 'Arial', sans-serif; /* Choose a modern font */
     margin: 0; /* Remove default margin */
+    display: flex; /* Center the badge vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of viewport */
   }
 
   .badge {
@@ -17,15 +21,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* More rounded corners */
     background-color: #343a40; /* Darker background for the badge */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+    transition: transform 0.2s; /* Animation for hover effect */
+  }
+
+  .badge:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
   }
 
   .badge img {
     width: 250px; /* Adjust image size as needed */
     height: 250px;
+    border-radius: 10px; /* Rounded corners for the image */
   }
 
   .badge-details {
@@ -34,18 +44,38 @@
   }
 
   .badge-details h2 {
-    font-size: 24px; /* Increase heading size */
+    font-size: 26px; /* Increase heading size */
     margin-bottom: 5px; /* Add spacing between heading and text */
-    color: #fff; /* White heading for better contrast */
+    color: #e8d07e; /* Gold color for better contrast */
   }
 
   .badge-details p {
     font-size: 18px; /* Adjust paragraph size */
-    margin: 0; /* Remove default margin for tighter spacing */
+    margin: 5px 0; /* Add margin for spacing */
   }
 
   .badge-details strong {
     color: #e8d07e; /* Accent color for awardee email */
+  }
+
+  /* Button styling */
+  a.download-button {
+    padding: 12px 25px; /* Increased padding for the button */
+    background-color: #1DA1F2; /* Twitter-like color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size for the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for button */
+    transition: background-color 0.3s, transform 0.2s; /* Animation for hover effect */
+  }
+
+  a.download-button:hover {
+    background-color: #0d8bdc; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift button on hover */
   }
 </style>
 <body>
@@ -56,6 +86,9 @@
       <p>Awarded to: <strong>hello.rajat.rajput@gmail.com</strong></p>
       <p>Issued on: <strong>Jul 28, 2024</strong> at <strong>1:11 AM</strong></p>
     </div>
+
+    <!-- Download badge button -->
+    <a href="badge.png" download class="download-button">Download Badge</a>
   </div>
 </body>
 </html>
