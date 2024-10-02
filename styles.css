@@ -100,3 +100,44 @@ footer {
 footer p {
   margin: 0; 
 }
+
+/*  */
+.share-section {
+  margin-top: 7px;
+  text-align: center; /* Center-align the section */
+}
+
+.share-section p {
+  font-weight: bold;
+  margin-bottom: 10px; /* Add margin for better spacing */
+}
+
+.share-button {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px; /* Adjust size */
+  color: white;
+  text-decoration: none;
+}
+
+.share-button i {
+  vertical-align: middle; /* Align icon vertically */
+ 
+}
+
+.share-button:hover {
+  opacity: 0.8;
+}
+
+ .twitter {
+  background-color: #080808;
+  padding: 10px 15px;
+  border-radius: 50%;
+  
+}
+
+.linkedin, .facebook {
+  background-color: #0077b5;
+  padding: 10px 15px;
+  border-radius: 50%;
+} 
