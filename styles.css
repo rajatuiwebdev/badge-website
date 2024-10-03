@@ -13,6 +13,30 @@
   margin: 0;
   padding: 0;
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(97, 5, 5);
+  top: -50px;
+  animation: fall linear forwards, fadeOut ease-out forwards; /* Add fadeOut */
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
 
 body {
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
@@ -99,4 +123,9 @@ footer {
 
 footer p {
   margin: 0; 
+  font-weight: 900;
+}
+footer a{
+  color: #4183c4;
+  font-weight: 900;
 }
