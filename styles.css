@@ -52,18 +52,20 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  height: calc(100vh - 60px); /* Adjust height for footer */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: calc(100vh - 60px);
 }
 
 .badge img {
-  width: 250px; /* Adjust image size as needed */
+  width: 250px;
   height: 250px;
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .badge img:hover {
   transform: scale(1.1); /* Zoom in on hover */
 }
+
 
 /* Hover effect for text */
 .badge-details h2:hover {
@@ -98,17 +100,18 @@ body {
 .download-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #58a6ff; /* Button background color */
-  color: white; /* Button text color */
+  background-color: #58a6ff;
+  color: white;
   border: none;
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s ease; /* Transition effect */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .download-button:hover {
-  background-color: #4183c4; 
+  background-color: #4183c4;
+  transform: scale(1.5); /* Slightly increases the button size */
 }
 
 footer {
@@ -195,4 +198,11 @@ footer a{
 /* Adding smooth hover effects */
 .share-button:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.footer-text{
+  /* margin-bottom: 15px;
+  padding-bottom: 25px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
