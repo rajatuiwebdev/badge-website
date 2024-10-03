@@ -206,3 +206,42 @@ footer a{
   align-items: center;
   justify-content: center;
 }
+/* Header Styles */
+header {
+  background-color: #0d6efd; /* Blue background color */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the header */
+}
+
+.header-container {
+  display: flex; /* Flexbox for aligning items */
+  justify-content: space-between; /* Space between title and nav */
+  align-items: center; /* Center vertically */
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Font size for header title */
+}
+
+nav ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Flexbox for horizontal layout */
+}
+
+nav ul li {
+  margin-left: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+  color: #ff85a1; /* Change color on hover */
+}
+
