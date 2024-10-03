@@ -87,6 +87,36 @@ body {
   background-color: #4183c4; 
 }
 
+.share-card {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center the buttons */
+  margin-top: 10px; /* Add space above the share section */
+}
+
+.share-card span {
+  margin-bottom: 10px; /* Space between label and buttons */
+  font-weight: bold; /* Make the label bold */
+}
+
+.share-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #ff6b81; 
+}
+
+.share-button:hover {
+  background-color: #ff4d68; /* Darker shade on hover */
+}
+
+
 footer {
   text-align: center;
   padding: 14px;
