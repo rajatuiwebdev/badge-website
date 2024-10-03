@@ -37,7 +37,7 @@
         alt="Badge Website"
       />
       <div class="badge-details">
-        <h2>Season of AI | Beginner AI Learner</h2>
+        <h2 id="typingeffect">Season of AI | Beginner AI Learner</h2>
         <p>Awarded to: <strong>hello.rajat.rajput@gmail.com</strong></p>
         <p>
           Issued on: <strong>Jul 28, 2024</strong> at <strong>1:11 AM</strong>
@@ -86,6 +86,38 @@
     </footer>
 
     <script>
+      // Typing effect for badge title
+      const badgeTitle = document.getElementById('typingeffect');
+      const badgeTitleText = badgeTitle.innerText; 
+      badgeTitle.innerText = '';  
+      let index = 0;
+      let typingSpeed = 100; 
+      let start = true; 
+
+      function typeEffect() {
+        if (start) {
+          if (index < badgeTitleText.length) {
+            badgeTitle.innerText = badgeTitleText.substring(0, index+1);
+            index++;
+            setTimeout(typeEffect, typingSpeed);
+          } else {
+            start = false;
+            setTimeout(typeEffect, 2000); 
+          }
+        } else {
+          if (index > 0) {
+            badgeTitle.innerText = badgeTitleText.substring(0, index - 1);
+            index--;
+            setTimeout(typeEffect, typingSpeed); 
+          } else {
+            start = true;
+            setTimeout(typeEffect, 500);
+          }
+        }
+      }
+
+      window.onload = typeEffect; 
+
       function createConfetti() {
         const confettiContainer = document.createDocumentFragment();
         const totalDuration = 5000; // 10 seconds in milliseconds
