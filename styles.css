@@ -216,10 +216,12 @@ header {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.qr-download-card{
+  margin-top: 15px;
+}
 .download-button:hover {
   background-color: #4183c4;
-  transform: scale(1.5); /* Slightly increases the button size */
+  transform: scale(1.2);
 }
 
 footer {
