@@ -10,7 +10,7 @@
 </p>
 </div>
 
-![Badge in Development](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![Badge in Development](http://img.shields.io/static/v1?label=STATUS&message=IN%20DEVELOPMENT&color=GREEN&style=for-the-badge)
 
 ## Demo
 Visit our website via the link: [Badge Website](https://badge-website.netlify.app/)
