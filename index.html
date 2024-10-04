@@ -51,6 +51,12 @@
           <i class="fas fa-bars"></i>
         </div>
       </div>
+    
+      <!-- Search bar  -->
+      <div class="search-bar-container">
+        <input type="text" id="badge-search" placeholder="Search for badges..." />
+        <button id="search-button" class="search-button">Search</button>
+      </div>
     </header>
     
     <div class="badge">
@@ -211,6 +217,37 @@ document.getElementById('download-qr-button').addEventListener('click', function
       window.addEventListener('load', () => {
         createConfetti();
       });
+
+      // Search bar functionality
+      const searchInput = document.getElementById('badge-search');
+      const searchButton = document.getElementById('search-button');
+      const badges = document.querySelectorAll('.badge-item');
+
+      function filterBadges() {
+        const searchQuery = searchInput.value.toLowerCase();
+
+      badges.forEach(badge => {
+        const badgeTitle = badge.querySelector('.badge-details h2').innerText.toLowerCase();
+        
+        if (badgeTitle.includes(searchQuery)) {
+          badge.style.display = 'block';  // Show the badge if it matches
+        } else {
+          badge.style.display = 'none';   // Hide the badge if it doesn't match
+        }
+      });
+    }
+
+      // Add event listener for search button click
+      searchButton.addEventListener('click', function () {
+        filterBadges();  
+      });
+
+      searchInput.addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+          filterBadges();
+        }
+      });
+
     </script>
   </body>
 </html>

@@ -316,3 +316,46 @@ footer a{
   align-items: center;
   justify-content: center;
 }
+
+.search-bar-container {
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#badge-search {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid #0d6efd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#badge-search:focus {
+  border-color: #007bff; 
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0a58ca;
+}
+
+.search-button:active {
+  background-color: #084298;
+}
