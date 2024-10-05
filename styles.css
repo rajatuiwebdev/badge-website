@@ -43,7 +43,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #dfe1e5; /* Light text color */
   margin: 0; /* Remove default margin */
-  overflow: hidden;
+  /* overflow: hidden; removed this as, because of this, footer was not visible, as page was not scrolling */
 }
 
 .badge {
