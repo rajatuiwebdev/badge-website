@@ -7,11 +7,25 @@
 #contact {
     padding: 30px;
     margin: 50px 0;
-    background: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(300deg ,#00435f,#369ae6 ,rgb(164, 53, 161));
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite; 
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes gradient-animation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 #contact h3 {
@@ -43,6 +57,7 @@ fieldset label {
     background: #FFF;
     margin: 5px 0 10px;
     padding: 10px;
+    border-radius: 20px;
 }
 
 #contact input[type="text"]:hover,
@@ -59,13 +74,14 @@ fieldset label {
 
 #contact button[type="submit"] {
     cursor: pointer;
-    width: 100%;
+    width: 30%;
     border: none;
-    background: #58a6ff;
+    background: #00b439;
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px;
     font-size: 15px;
+    border-radius: 20px;
 }
 
 #contact button[type="submit"]:hover {
