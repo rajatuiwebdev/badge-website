@@ -1,3 +1,4 @@
+
 /* Reset styles */
 * {
   margin: 0;
@@ -53,6 +54,67 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff85a1; /* Change color on hover */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #dfe1e5;
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+}
+
+/* Keyframes for Confetti Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(97, 5, 5);
+  top: -50px;
+  animation: fall linear forwards, fadeOut ease-out forwards;
+}
+
+body {
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+  font-family: "Poppins", sans-serif;
+  color: #dfe1e5; /* Light text color */
+  margin: 0; /* Remove default margin */
+  /* overflow: hidden; removed this as, because of this, footer was not visible, as page was not scrolling */
+
 }
 
 .badge {
@@ -67,13 +129,153 @@ nav ul li a:hover {
 
 .badge img {
   width: 250px;
-  height: 250px;
+   height: 210px;  /* reduce the height of badge image for better user experience */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .badge img:hover {
   transform: scale(1.1); /* Zoom in on hover */
 }
+
+
+
+/* HEADER CSS */
+/* Header container styling */
+header {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #1c1f24; /* Dark background */
+  border-bottom: 2px solid #58a6ff; /* Border for separation */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #dfe1e5;
+  font-weight: 900;
+}
+
+nav {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+}
+
+.nav-links ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links ul li {
+  height: 100%;
+  margin-left: 20px;
+}
+
+.nav-links ul li a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #dfe1e5;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #58a6ff;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2px;
+  height: 100vh;
+  max-width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  width: 100%;
+  height: 120px !important;
+  margin: 5px 0;
+}
+
+.sidebar a {
+  width: 100%;
+  height: 120px !important;
+  display: block;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .showOnMobile {
+      display: flex;
+  }
+
+  .menu-btn {
+      display: block;
+  }
+}
+
+/* For smaller devices */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100% ;
+  }
+
+  /* .logo h1 {
+    font-size: 20px;
+  } */
+}
+
+
 
 /* Hover effect for text */
 .badge-details h2:hover {
@@ -116,15 +318,19 @@ nav ul li a:hover {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.qr-download-card{
+  margin-top: 15px;
+}
 .download-button:hover {
   background-color: #4183c4;
   transform: scale(1.05); /* Slightly increases the button size */
+
 }
 
 footer {
+  min-height: 15vh;
   text-align: center;
-  padding: 14px;
+  padding: 40px;
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   color: #dfe1e5;
   position: relative;
@@ -145,12 +351,13 @@ footer a {
 .share-section {
   text-align: center;
   margin-top: 20px;
+ margin-bottom: 34px;   /* add margin bottom for proper visibility of share section */
 }
 
 .share-section p {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
@@ -158,7 +365,7 @@ footer a {
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 15px;
   border-radius: 50%;
   color: #fff;
@@ -244,4 +451,191 @@ footer a {
       transform: translateY(100vh);
       opacity: 1;
   }
+}
+
+.search-bar-container {
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#badge-search {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid #0d6efd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#badge-search:focus {
+  border-color: #007bff; 
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0a58ca;
+}
+
+.search-button:active {
+  background-color: #084298;
+}
+
+
+.slider-container {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.badge-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+   margin-top: 55px;  /* add margin top for badge image proper visibility */
+}
+
+.badge-details h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.badge-details p {
+  margin: 5px 0;
+}
+
+.download-button, .share-button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 1000px;
+  margin-top: 10px;
+}
+
+.download-button:hover, .share-button:hover {
+  background-color: #0056b3;
+}
+
+.share-section a {
+  margin-right: 10px;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.slider-nav button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.slider-nav button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+
+
+/* Styles for the badge cards */
+.badges-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+}
+
+.badges-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  gap: 20px; /* Space between cards */
+  justify-items: center;
+}
+
+.badge-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.badge-card img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.badge-card h3 {
+  font-size: 1.2em;
+  color: #3a3a3a;
+  margin-bottom: 10px;
+}
+
+.badge-card p {
+  font-size: 0.9em;
+  color: #2b2b2b;
+}
+
+.badge-card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .badges-container {
+      grid-template-columns: repeat(2, 1fr); /* Two badges per row on smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .badges-container {
+      grid-template-columns: 1fr; /* One badge per row on very small screens */
+  }
+
+}
+@media (min-width:768px) {
+  .hideOnMobile{
+    display: none;
+  }
+  
+
 }

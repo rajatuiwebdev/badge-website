@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Badge Website</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" href="../Favicon/favicon.ico?v=2">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../Favicon/favicon-32x32.png" alt="Logo" />
+        <h1>Badge Website</h1>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./badges.html">Badges</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+    <main>
+    <div class="container">
+      <form id="contact" action="#" method="post">
+        <h3>Contact Us</h3>
+        <fieldset>
+          <label for="name">Name</label>
+          <input placeholder="Enter your name" type="text" name="name" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <label for="name">Email</label>
+          <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+          <label for="message">Message</label>
+          <textarea placeholder="Type your message here...." name="message" tabindex="5" required></textarea>
+        </fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-text">
+      <p>
+        Follow us on
+        <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
+        <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
+      </p>
+      <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contact {
+    padding: 30px;
+    margin: 50px 0;
+    background: linear-gradient(300deg ,#00435f,#369ae6 ,rgb(164, 53, 161));
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite; 
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes gradient-animation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+#contact h3 {
+    color: white;
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+fieldset label {
+    color: white;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 5px 0 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact textarea:hover {
+    border: 1px solid #aaa;
+}
+
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    background: #00b439;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+#contact button[type="submit"]:hover {
+    background: #348cf1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+}
