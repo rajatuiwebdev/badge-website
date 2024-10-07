@@ -1,16 +1,14 @@
 .about-section {
-    padding: 40px;
+    padding-top: 40px;
     background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000); 
     color: #dfe1e5; 
     text-align: center;
-    height: auto; 
+    height: 82vh;  /* Full screen height */
     background-repeat: no-repeat;
     background-size: cover; 
     position: relative; 
     overflow: hidden; 
-    min-height: 70vh;
 }
-
 
 .about-section h2 {
     font-size: 36px;
@@ -23,5 +21,3 @@
     max-width: 800px;
     margin: 0 auto 20px auto;
 }
-
-
