@@ -267,8 +267,9 @@ nav {
 }
 
 footer {
+  min-height: 15vh;
   text-align: center;
-  padding: 14px;
+  padding: 40px;
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   color: #dfe1e5;
   position: relative; 
@@ -478,7 +479,6 @@ footer a{
 
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
- } /* closed curly braces are expected that was not earlier */
 
 /* Styles for the badge cards */
 .badges-section {
