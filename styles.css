@@ -71,7 +71,7 @@ body {
 
 .badge img {
   width: 250px;
-  height: 250px;
+   height: 210px;  /* reduce the height of badge image for better user experience */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
@@ -288,12 +288,13 @@ footer a{
 .share-section {
   text-align: center;
   margin-top: 20px;
+ margin-bottom: 34px;   /* add margin bottom for proper visibility of share section */
 }
 
 .share-section p {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
@@ -301,7 +302,7 @@ footer a{
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 15px;
   border-radius: 50%;
   color: #fff;
@@ -427,6 +428,7 @@ footer a{
   flex-direction: column;
   align-items: center;
   text-align: center;
+   margin-top: 55px;  /* add margin top for badge image proper visibility */
 }
 
 .badge-details h2 {
@@ -476,7 +478,7 @@ footer a{
 
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
-=======
+ } /* closed curly braces are expected that was not earlier */
 
 /* Styles for the badge cards */
 .badges-section {
@@ -535,3 +537,4 @@ footer a{
   .badges-container {
       grid-template-columns: 1fr; /* One badge per row on very small screens */
   }
+}
