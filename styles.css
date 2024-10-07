@@ -480,6 +480,7 @@ footer a{
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 
+
 /* Styles for the badge cards */
 .badges-section {
   padding: 20px;
@@ -537,4 +538,12 @@ footer a{
   .badges-container {
       grid-template-columns: 1fr; /* One badge per row on very small screens */
   }
+
+}
+@media (min-width:768px) {
+  .hideOnMobile{
+    display: none;
+  }
+  
+
 }
