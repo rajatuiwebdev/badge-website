@@ -1,3 +1,60 @@
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background */
+  color: #333; /* Dark text color */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+  color: #dfe1e5; /* Light text color */
+}
+
+.header-container {
+  display: flex; /* Flexbox for aligning items */
+  justify-content: space-between; /* Space between title and nav */
+  align-items: center; /* Center vertically */
+}
+
+header {
+  background-color: #0d6efd; /* Blue background color */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the header */
+}
+
+h1 {
+  font-size: 24px; /* Font size for header title */
+}
+
+nav ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Flexbox for horizontal layout */
+}
+
+nav ul li {
+  margin-left: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+  color: #ff85a1; /* Change color on hover */
+
 /* General Styles */
 * {
   margin: 0;
@@ -57,6 +114,7 @@ body {
   color: #dfe1e5; /* Light text color */
   margin: 0; /* Remove default margin */
   /* overflow: hidden; removed this as, because of this, footer was not visible, as page was not scrolling */
+
 }
 
 .badge {
@@ -71,13 +129,14 @@ body {
 
 .badge img {
   width: 250px;
-  height: 250px;
+   height: 210px;  /* reduce the height of badge image for better user experience */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .badge img:hover {
   transform: scale(1.1); /* Zoom in on hover */
 }
+
 
 
 /* HEADER CSS */
@@ -217,6 +276,7 @@ nav {
 }
 
 
+
 /* Hover effect for text */
 .badge-details h2:hover {
   color: #e8d07e;
@@ -263,15 +323,17 @@ nav {
 }
 .download-button:hover {
   background-color: #4183c4;
-  transform: scale(1.2);
+  transform: scale(1.05); /* Slightly increases the button size */
+
 }
 
 footer {
+  min-height: 15vh;
   text-align: center;
-  padding: 14px;
+  padding: 40px;
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   color: #dfe1e5;
-  position: relative; 
+  position: relative;
   width: 100%;
   border-top: 3px solid #58a6ff;
 }
@@ -280,7 +342,8 @@ footer p {
   margin: 0; 
   font-weight: 900;
 }
-footer a{
+
+footer a {
   color: #4183c4;
   font-weight: 900;
 }
@@ -288,12 +351,13 @@ footer a{
 .share-section {
   text-align: center;
   margin-top: 20px;
+ margin-bottom: 34px;   /* add margin bottom for proper visibility of share section */
 }
 
 .share-section p {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
@@ -301,7 +365,7 @@ footer a{
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 15px;
   border-radius: 50%;
   color: #fff;
@@ -351,12 +415,42 @@ footer a{
 .share-button:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.footer-text{
-  /* margin-bottom: 15px;
-  padding-bottom: 25px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* Confetti Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0.2;
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(97, 5, 5);
+  top: -50px;
+  animation: fall linear forwards, fadeOut ease-out forwards; /* Add fadeOut */
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh);
+      opacity: 1;
+  }
 }
 
 .search-bar-container {
@@ -427,6 +521,7 @@ footer a{
   flex-direction: column;
   align-items: center;
   text-align: center;
+   margin-top: 55px;  /* add margin top for badge image proper visibility */
 }
 
 .badge-details h2 {
@@ -476,7 +571,7 @@ footer a{
 
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
-=======
+
 
 /* Styles for the badge cards */
 .badges-section {
@@ -535,3 +630,12 @@ footer a{
   .badges-container {
       grid-template-columns: 1fr; /* One badge per row on very small screens */
   }
+
+}
+@media (min-width:768px) {
+  .hideOnMobile{
+    display: none;
+  }
+  
+
+}
