@@ -6,40 +6,29 @@
     <title>Badge Website</title>
 
     <link rel="stylesheet" href="styles.css" />
-    <!-- Updated the link to a newer version to include the X(twitter) icon -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="./Favicon/apple-touch-icon.png"
-    />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="./Favicon/favicon-32x32.png"
-    />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="./Favicon/favicon-16x16.png"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="Favicon/favicon.ico?v=2">
-
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="header-container">
-            <h1>Badge Website</h1>
-            <nav>
+            <div class="logo">
+                <img src="Favicon/favicon-32x32.png" alt="Logo" />
+                <h1>Badge Website</h1>
+            </div>
+            <nav class="nav-links">
                 <ul>
-                    <li><a href="pages/about.html">About</a>
+
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./pages/about.html">About</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                    <li><a href="./pages/badges.html">Badges</a></li>
+                <li><a href="pages/about.html">About</a>
                     </li>
                     <li><a href="pages/badges.html">badges</a>
                     </li>
@@ -47,125 +36,84 @@
                     </li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-toggle">
-                <i class="fas fa-sun"></i>
+        </div>
+    </header>
+
+    <div class="badge" align = "center" style = "background: linear-gradient(35deg, rgba(10, 151, 207, 0.9) 50%, rgba(15, 61, 214, 0.9) 50%);">
+      <br /> <br />
+      <img
+          src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
+          alt="Badge Website"
+      /> <br /> <br />
+      <div class="badge-details">
+          <h2 id="typingeffect">Season of AI | Beginner AI Learner</h2> <br />
+          <p>Awarded to: <strong>hello.rajat.rajput.rajput@gmail.com</strong></p>
+          <p>
+              Issued on: <strong>Jul 28, 2024</strong> at <strong>1:11 AM</strong> <br>
+          </p>
+      </div>
+      <div class="download-card">
+          <a download href="badge.png" class="download-button">Download Badge</a>
+      </div>
+
+      <!-- Share Section with Social Media Icons -->
+      <div class="share-section">
+          <p>Share your badge:</p> <br />
+          <a
+              href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Beginner%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
+              target="_blank"
+              class="share-button twitter"
+          >
+              <i class="fa-brands fa-square-x-twitter"></i>
+          </a>
+          <a
+              href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Beginner%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Beginner%20AI%20Learner%20Badge!%20Check%20it%20out:"
+              target="_blank"
+              class="share-button linkedin"
+          >
+              <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
+              target="_blank"
+              class="share-button facebook"
+          >
+              <i class="fab fa-facebook-f"></i>
+          </a>
+      </div> <br />
+
+    <div class="slider-container">
+        <div class="slider" id="badge-slider">
+            <!-- Slides will be dynamically generated here -->
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+            <button id="prev-btn">
+                <img src="assets/icons/chevron-left.png" alt="Prev" width="32" height="32">
+            </button>
+            <button id="next-btn">
+                <img src="assets/icons/chevron-right.png" alt="Next" width="32" height="32">
             </button>
         </div>
-    </header>
+    </div> <br>
 
-    <div class="badge">
-        <img
-            src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-            alt="Badge Website"
-        />
-        <div class="badge-details">
-            <h2 id="typingeffect">Season of AI | Beginner AI Learner</h2>
-            <p>Awarded to: <strong>hello.rajat.rajput.rajput@gmail.com</strong></p>
-            <p>
-                Issued on: <strong>Jul 28, 2024</strong> at <strong>1:11 AM</strong>
-            </p>
-        </div>
-        <div class="download-card">
-            <a download href="badge.png" class="download-button">Download Badge</a>
-        </div>
-
-        <!-- Share Section with Social Media Icons -->
-        <div class="share-section">
-            <p>Share your badge:</p>
-            <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Beginner%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-            >
-                <i class="fa-brands fa-square-x-twitter"></i>
-            </a>
-            <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Beginner%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Beginner%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-            >
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-            >
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </div>
-
-  </head>
-  <body>
-
-    <header>
-      <div class="header-container">
-        <div class="logo">
-          <img src="Favicon/favicon-32x32.png" alt="Logo" />
-          <h1>Badge Website</h1>
-        </div>
-        <nav class="nav-links">
-          <ul class="sidebar">
-            <li class="showOnMobile" onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
-            <li class="showOnMobile"><a href="#">Home</a></li>
-            <li class="showOnMobile"><a href="#">About</a></li>
-            <li class="showOnMobile"><a href="./pages/contact.html">Contact</a></li>
-            <li class="showOnMobile"><a href="./pages/badges.html">Badges</a></li>
-          </ul>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
-            <li><a href="./pages/badges.html">Badges</a></li>
-            <li class="hideOnMobile"><a href="/">Home</a></li>
-            <li class="hideOnMobile"><a href="./pages/about.html">About</a></li>
-            <li class="hideOnMobile"><a href="./pages/contact.html">Contact</a></li>
-            <li class="hideOnMobile"><a href="./pages/badges.html">Badges</a></li>
-            <li class="menu-btn" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-          </ul>
-        </nav>
-        <!-- <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div> -->
-      </div>
-    
-      <!-- Search bar  -->
-      <div class="search-bar-container">
-        <input type="text" id="badge-search" placeholder="Search for badges..." />
-        <button id="search-button" class="search-button">Search</button>
-      </div>
-    </header>
-    
-    <div class="slider-container">
-      <div class="slider" id="badge-slider">
-        <!-- Slides will be dynamically generated here -->
-      </div>
-  
-      <!-- Slider Navigation -->
-      <div class="slider-nav">
-        <button id="prev-btn">
-          <img src="assets/icons/chevron-left.png" alt="Prev" width="32" height="32">
-        </button>
-        <button id="next-btn">
-          <img src="assets/icons/chevron-right.png" alt="Next" width="32" height="32">
-        </button>
-      </div>
-
-    </div>
-
-    <footer>
-        <div class="footer-text">
-            <p>
+    <footer align = "center">
+      <header align = "center"><div class = "header-container" align = "center">
+        <div class="footer-text" align = "center">
+            <p align = "center">
                 Follow us on
                 <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
                 <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
             </p>
             <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
         </div>
+      </div></header>
     </footer>
 
     <!-- QRious Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
 
     <script>
 
@@ -508,5 +456,6 @@
       });
 
     </script>
+
 </body>
 </html>
