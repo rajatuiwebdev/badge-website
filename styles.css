@@ -179,7 +179,7 @@ nav {
   font-size: 18px;
   display: flex;
   align-items: center;
-  padding: 18px;
+  padding: 18px 0px 18px 0px;
 }
 
 .nav-links ul {
@@ -195,9 +195,9 @@ nav {
   margin-left: 20px;
 }
 
-.nav-links ul li a {
+ ul li a {
   height: 100%;
-  padding: 0 20px;
+  padding: 0;
   display: flex;
   align-items: center;
   text-decoration: none;
