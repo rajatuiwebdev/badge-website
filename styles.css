@@ -28,7 +28,7 @@ body.dark-theme {
 }
 
 header {
-  background-color: #0d6efd; /* Blue background color */
+  background: rgba(144, 214, 15, 0.9); /* Blue background color */
   color: white; /* White text color */
   padding: 20px; /* Padding around the header */
 }
