@@ -20,22 +20,23 @@
             <div class="logo">
                 <img src="Favicon/favicon-32x32.png" alt="Logo" />
                 <h1>Badge Website</h1>
-            </div>
+            </div>                
             <nav class="nav-links">
-                <ul>
-
-                    <li><a href="/">Home</a></li>
-                    <li><a href="./pages/about.html">About</a></li>
-                    <li><a href="./pages/contact.html">Contact</a></li>
-                    <li><a href="./pages/badges.html">Badges</a></li>
-                <li><a href="pages/about.html">About</a>
-                    </li>
-                    <li><a href="pages/badges.html">badges</a>
-                    </li>
-                    <li><a href="pages/contact.html">contact</a>
-                    </li>
-                </ul>
-            </nav>
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="./pages/about.html">About</a></li>
+                  <li><a href="./pages/contact.html">Contact</a></li>
+                  <li><a href="./pages/badges.html">Badges</a></li>
+              </ul>
+          </nav>
+          <nav class="nav-links" aria-label="Main Navigation">
+            <ul>
+                <li><a href="/" aria-label="Home">Home</a></li>
+                <li><a href="./pages/about.html" aria-label="About">About</a></li>
+                <li><a href="./pages/contact.html" aria-label="Contact">Contact</a></li>
+                <li><a href="./pages/badges.html" aria-label="Badges">Badges</a></li>
+            </ul>
+        </nav>
         </div>
     </header>
 
@@ -113,7 +114,6 @@
 
     <!-- QRious Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-
 
     <script>
 
@@ -211,7 +211,7 @@
             const isDarkTheme = body.classList.contains('dark-theme');
             themeToggleButton.innerHTML = isDarkTheme 
                 ? '<i class="fas fa-moon"></i>' 
-                : '<i class="fas fa-sun"></i>';
+                : '<i class="fas fa-sun "></i>';
         });
 
         document.addEventListener("DOMContentLoaded", function() {
@@ -288,7 +288,7 @@
               <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=${badge.title}&summary=I%20earned%20the%20${badge.title}%20Badge!%20Check%20it%20out:" target="_blank" class="share-button linkedin">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech" target="_blank" class="share-button facebook">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech" target="_ blank" class="share-button facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </div>
@@ -364,7 +364,7 @@
       const qrCodeCanvas = document.getElementById('qr-code-canvas');
 
       // Badge details
-      const recipientEmail = 'hello.rajat.rajput@gmail.com';
+      const recipientEmail = 'hello.rajat.rajput.rajput@gmail.com';
       const issuedDate = 'Jul 28, 2024';
       const badgeLink = `https://ai.mlsc-amity.tech?badge=${recipientEmail}&issued=${issuedDate}`;
 
@@ -416,7 +416,7 @@
 
       function getRandomColor() {
         // Blue color palette for confetti
-        const colorsBlu = ['#0d6efd', '#0a58ca', '#007bff', '#6cb2eb', '#81d4fa'];
+        const colorsBlu = ['#0d6efd ', '#0a58ca', '#007bff', '#6cb2eb', '#81d4fa'];
         return colorsBlu[Math.floor(Math.random() * colorsBlu.length)];
       }
 
