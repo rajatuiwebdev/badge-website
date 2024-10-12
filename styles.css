@@ -54,7 +54,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff85a1; /* Change color on hover */
-
+}
 /* General Styles */
 * {
   margin: 0;
@@ -180,6 +180,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 18px 0px 18px 0px;
+  position: relative;
 }
 
 .nav-links ul {
@@ -188,6 +189,18 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-direction: row;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.hamburger {
+  display: none; 
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .nav-links ul li {
@@ -209,6 +222,8 @@ nav {
 .nav-links ul li a:hover {
   color: #58a6ff;
 }
+
+
 
 .sidebar {
   position: fixed;
@@ -568,10 +583,10 @@ footer a {
   cursor: pointer;
   font-size: 18px;
 }
-
+/* TODO missing backet */
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
-
+}
 
 /* Styles for the badge cards */
 .badges-section {
@@ -624,6 +639,39 @@ footer a {
   .badges-container {
       grid-template-columns: repeat(2, 1fr); /* Two badges per row on smaller screens */
   }
+  nav{
+    padding: 50px;
+  }
+  .nav-links ul {
+    color: red;
+    display: none;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Absolute positioning */
+    top: 70%; /* Align below the nav */
+    right: 10%; 
+
+    z-index: 999; /* On top */
+    gap: 15px;
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  #nav-list li{
+    padding: 10px;
+
+  }
+
+.nav-links.active ul {
+    display: block;
+    max-height: 300px;
+    width: 100%;
+    
+}
+
+.hamburger {
+    display: block;     
+}
+
 }
 
 @media (max-width: 500px) {
@@ -639,3 +687,5 @@ footer a {
   
 
 }
+
+

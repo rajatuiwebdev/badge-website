@@ -21,20 +21,14 @@
                 <img src="Favicon/favicon-32x32.png" alt="Logo" />
                 <h1>Badge Website</h1>
             </div>
-            <nav class="nav-links">
-                <ul>
-
-                    <li><a href="/">Home</a></li>
-                    <li><a href="./pages/about.html">About</a></li>
-                    <li><a href="./pages/contact.html">Contact</a></li>
-                    <li><a href="./pages/badges.html">Badges</a></li>
-                <li><a href="pages/about.html">About</a>
-                    </li>
-                    <li><a href="pages/badges.html">badges</a>
-                    </li>
-                    <li><a href="pages/contact.html">contact</a>
-                    </li>
-                </ul>
+            <nav class="nav-links" id="nav-links">
+              <div class="hamburger" id="hamburger">&#9776;</div>
+              <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
             </nav>
         </div>
     </header>
@@ -324,6 +318,13 @@
     </script>
 
     <script>
+          // Navbar 
+          const hamburger = document.getElementById('hamburger');
+          const navList = document.getElementById('nav-links');
+      
+          hamburger.addEventListener('click', () => {
+              navList.classList.toggle('active');
+          });
       // Typing effect for badge title
       document.addEventListener("DOMContentLoaded", function() {
         const badgeTitles = document.querySelectorAll('.typingeffect'); 
@@ -455,6 +456,7 @@
         }
       });
 
+  
     </script>
 
 </body>
