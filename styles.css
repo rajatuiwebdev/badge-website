@@ -5,6 +5,71 @@
   padding: 0;
 }
 
+
+/* here i add css for toggle bar */
+/* Basic styling */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li {
+  margin-right: 15px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: rgb(20, 19, 19);
+      box-shadow: 0px 4px 12px rgba(97, 96, 96, 0.05); /* More transparent shadow */
+
+      padding: 20px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-toggle {
+      display: flex;
+  }
+}
+
+
+
+
+
+
+
+
 /* Base Styles */
 body {
   font-family: "Poppins", sans-serif;
@@ -54,7 +119,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff85a1; /* Change color on hover */
-
+}
 /* General Styles */
 * {
   margin: 0;

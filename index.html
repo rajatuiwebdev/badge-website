@@ -16,28 +16,35 @@
 <body>
     <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="Favicon/favicon-32x32.png" alt="Logo" />
-                <h1>Badge Website</h1>
-            </div>
-            <nav class="nav-links">
-                <ul>
+      <div class="header-container">
+          <div class="logo">
+              <img src="Favicon/favicon-32x32.png" alt="Logo" />
+              <h1>Badge Website</h1>
+          </div>
+          <div class="nav-toggle" id="navToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <nav class="nav-links" id="navLinks">
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="./pages/about.html">About</a></li>
+                  <li><a href="./pages/contact.html">Contact</a></li>
+                  <li><a href="./pages/badges.html">Badges</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+<script>
+  const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
 
-                    <li><a href="/">Home</a></li>
-                    <li><a href="./pages/about.html">About</a></li>
-                    <li><a href="./pages/contact.html">Contact</a></li>
-                    <li><a href="./pages/badges.html">Badges</a></li>
-                <li><a href="pages/about.html">About</a>
-                    </li>
-                    <li><a href="pages/badges.html">badges</a>
-                    </li>
-                    <li><a href="pages/contact.html">contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+</script>  
 
     <div class="badge" align = "center" style = "background: linear-gradient(35deg, rgba(10, 151, 207, 0.9) 50%, rgba(15, 61, 214, 0.9) 50%);">
       <br /> <br />
