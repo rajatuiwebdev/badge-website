@@ -54,7 +54,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff85a1; /* Change color on hover */
-
+}
 /* General Styles */
 * {
   margin: 0;
@@ -571,7 +571,7 @@ footer a {
 
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
-
+}
 
 /* Styles for the badge cards */
 .badges-section {
@@ -632,10 +632,80 @@ footer a {
   }
 
 }
-@media (min-width:768px) {
-  .hideOnMobile{
+@media (min-width: 768px) {
+  .hideOnMobile {
     display: none;
   }
-  
 
+  
 }
+footer {
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+  color: #dfe1e5;
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid #58a6ff;
+  width: 100%;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff85a1;
+}
+
+footer p {
+  margin: 10px 0;
+  font-weight: 900;
+}
+
+.footer-content {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between; /* Changed to space-between for better alignment */
+  align-items: flex-start; /* Align items at the start vertically */
+}
+
+/* Footer Sections */
+.footer-left, .quick-links, .footer-right {
+  margin-bottom: 15px;
+  text-align: center;
+  flex: 1; /* Allow equal growth of footer sections */
+}
+
+.footer-left h3, .quick-links p, .footer-right h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-left p {
+  font-size: 14px; /* Adjust font size for the paragraph */
+}
+
+/* Social Icons Styles */
+.social-icons {
+  margin-top: 5px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin: 0 10px;
+  color: #dfe1e5;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #58a6ff;
+}
+
+
