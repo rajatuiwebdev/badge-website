@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>Badge Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #FFF;
+        }
+        .header {
+            background-color: #FFA500;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .header .nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .header .nav a:hover {
+            color: #000;
+        }
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #464646;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card .card-info {
+            padding: 20px;
+        }
+        .card .card-info p {
+            margin: 10px 0;
+        }
+        .card .card-info a {
+            color: #FFA500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .card .card-info a:hover {
+            color: #FFD700;
+        }
+        .card .card-info .social-icons {
+            margin-top: 10px;
+        }
+        .card .card-info .social-icons a {
+            color: #FFA500;
+            margin: 0 5px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .card .card-info .social-icons a:hover {
+            color: #FFD700;
+        }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header .nav {
+                justify-content: center;
+                width: 100%;
+            }
+            .badge-container {
+                padding: 20px;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <img alt="Badge icon" height="30" src="https://storage.googleapis.com/a1aa/image/Oe2NorsYiTSacaGIfDNaZWxp3p9bpQKEpI0yjFwPgtB8aeKnA.jpg" width="30"/>
+            Badge Website
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Badges</a>
+        </div>
+    </div>
+    <div class="badge-container">
+        <div class="card">
+            <img alt="Season of AI Microsoft Learn Newcomer badge" src="https://storage.googleapis.com/a1aa/image/psfaeyZWk1uD4EKh6z6AMVCShMZfN4E4ZdCeeByhh3wzXzrcC.jpg"/>
+            <div class="card-info">
+                <p>Season of AI</p>
+                <p>Awarded to: hello.rajput@gmail.com</p>
+                <p>Issued on: Jul 28, 2023 at 1:11 AM</p>
+                <p><a href="#">Download Badge</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img alt="Season of AI Microsoft Learn Newcomer badge" src="https://storage.googleapis.com/a1aa/image/psfaeyZWk1uD4EKh6z6AMVCShMZfN4E4ZdCeeByhh3wzXzrcC.jpg"/>
+            <div class="card-info">
+                <p>Season of AI</p>
+                <p>Awarded to: hello.rajput@gmail.com</p>
+                <p>Issued on: Jul 28, 2023 at 1:11 AM</p>
+                <p><a href="#">Download Badge</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
