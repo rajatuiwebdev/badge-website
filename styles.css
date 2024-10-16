@@ -54,6 +54,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff85a1; /* Change color on hover */
+}
 
 /* General Styles */
 * {
@@ -572,6 +573,7 @@ footer a {
 .slider-nav button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 
+}
 
 /* Styles for the badge cards */
 .badges-section {
@@ -582,7 +584,7 @@ footer a {
 
 .badges-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns
   gap: 20px; /* Space between cards */
   justify-items: center;
 }
@@ -597,6 +599,7 @@ footer a {
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease;
+  margin: 0.5rem 0;
 }
 
 .badge-card img {
