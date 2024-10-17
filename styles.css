@@ -129,11 +129,14 @@ body {
 }
 
 .badge img {
-  width: 250px;
-   height: 210px;  /* reduce the height of badge image for better user experience */
-  transition: transform 0.3s ease; /* Smooth transition */
+  width: 210px;
+   height: 190px;  /* reduce the height of badge image for better user experience */
+  transition: transform 0.5s ease-in-out;
 }
 
+.badge:hover img{
+  transform: scale(1.1);
+}
 
 /* HEADER CSS */
 /* Header container styling */
@@ -546,8 +549,13 @@ footer a {
 }
 
 .badge-card img {
-  max-width: 100px;
-  margin-bottom: 15px;
+  max-width: 120px;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.badge-card:hover img{
+  transform: scale(1.1);
 }
 
 .badge-card h3 {
