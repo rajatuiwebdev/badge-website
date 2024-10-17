@@ -1,29 +1,4 @@
-const badgeList = [
-    {
-      imageUrl: "https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png",
-      title: "Season of AI | Beginner AI Learner",
-      awardedTo: "hello.rajat.rajput@gmail.com",
-      issuedOn: "Jul 28, 2024",
-      issuedAt: "1:11 AM",
-      downloadLink: "assets/images/badge.png",
-    },
-    {
-      imageUrl: "https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png",
-      title: "Season of AI | Intermediate AI Learner",
-      awardedTo: "example.user@example.com",
-      issuedOn: "Sep 17, 2024",
-      issuedAt: "3:55 PM",
-      downloadLink: "assets/images/badge.png",
-    },
-    {
-      imageUrl: "https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png",
-      title: "Season of AI | Advance AI Learner",
-      awardedTo: "example.user@example.com",
-      issuedOn: "dec 17, 2024",
-      issuedAt: "8:55 PM",
-      downloadLink: "assets/images/badge.png",
-    }
-  ];
+
 
   const slider = document.getElementById('badge-slider');
 

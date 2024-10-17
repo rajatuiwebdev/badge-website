@@ -3,6 +3,8 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Base Styles */
@@ -114,7 +116,6 @@ body {
   font-family: "Poppins", sans-serif;
   color: #dfe1e5; /* Light text color */
   margin: 0; /* Remove default margin */
-  /* overflow: hidden; removed this as, because of this, footer was not visible, as page was not scrolling */
 
 }
 
@@ -134,11 +135,6 @@ body {
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.badge img:hover {
-  transform: scale(1.1); /* Zoom in on hover */
-}
-
-
 
 /* HEADER CSS */
 /* Header container styling */
@@ -156,7 +152,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+
 }
 
 .logo {
@@ -180,7 +176,6 @@ nav {
   font-size: 18px;
   display: flex;
   align-items: center;
-  padding: 18px 0px 18px 0px;
 }
 
 .nav-links ul {
@@ -192,7 +187,6 @@ nav {
 }
 
 .nav-links ul li {
-  height: 100%;
   margin-left: 20px;
 }
 
@@ -270,18 +264,6 @@ nav {
   .sidebar {
     width: 100% ;
   }
-
-  /* .logo h1 {
-    font-size: 20px;
-  } */
-}
-
-
-
-/* Hover effect for text */
-.badge-details h2:hover {
-  color: #e8d07e;
-  transition: color 0.3s ease-in-out;
 }
 
 .badge-details {
@@ -334,13 +316,11 @@ footer {
   padding: 40px;
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   color: #dfe1e5;
-  position: relative;
   width: 100%;
   border-top: 3px solid #58a6ff;
 }
 
 footer p {
-  margin: 0; 
   font-weight: 900;
 }
 
@@ -497,24 +477,11 @@ footer a {
   background-color: #084298;
 }
 
-
-.slider-container {
-  width: 60%;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
 .badge-slide {
   min-width: 100%;
   box-sizing: border-box;
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .badge {
@@ -587,6 +554,7 @@ footer a {
   grid-template-columns: repeat(3, 1fr); /* Three equal-width columns
   gap: 20px; /* Space between cards */
   justify-items: center;
+  align-items: center;
 }
 
 .badge-card {
@@ -594,6 +562,8 @@ footer a {
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 100%;
+  display: grid;
+  place-items: center;
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
