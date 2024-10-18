@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .sign-up-page {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 10px;
+    }
+    input {
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      text-align: center;
+      margin-top: 10px;
+    }
+    p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="sign-up-page">
+    <h2>Sign Up</h2>
+    <form id="signUpForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="sign-in.html">Sign In</a></p>
+  </div>
+
+  <script>
+    // Sign Up form submit logic
+    document.getElementById('signUpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password === confirmPassword) {
+        console.log('Sign Up:', { name, email, password });
+        // Insert sign-up logic (API call or validation) here
+      } else {
+        alert('Passwords do not match!');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .sign-in-page {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 10px;
+    }
+    input {
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      text-align: center;
+      margin-top: 10px;
+    }
+    p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="sign-in-page">
+    <h2>Sign In</h2>
+    <form id="signInForm">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+  </div>
+
+  <script>
+    // Sign In form submit logic
+    document.getElementById('signInForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      console.log('Sign In:', { email, password });
+
+      // Insert sign-in logic (API call or validation) here
+    });
+  </script>
+</body>
+</html>
