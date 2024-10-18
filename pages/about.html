@@ -12,6 +12,268 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="../Favicon/favicon.ico?v=2">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6; /* Light grey background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x600/?achievement'); /* Decreased height */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px; /* Adjusted padding */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px; /* Adjusted font size */
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 20px 0;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, border 0.3s;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s, left 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .about-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .about-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-section h2 {
+            font-size: 42px;
+            color: #5a5353;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .about-section h2:hover {
+            color: #007bff;
+        }
+
+        .about-section p {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #f3ecec;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: rgba(0, 247, 255, 0.925);
+            color: #333;
+            padding: 20px;
+            border-left: 5px solid #ffcc00;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .highlight:hover {
+            transform: scale(1.03);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e0b800;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .mission-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff9c4; /* Light yellow background for emphasis */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-section h3 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .mission-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-text a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .footer-text a:hover {
+            background-color: rgba(244, 240, 240, 0.2);
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin: 10px 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .about-section {
+                margin: 30px 20px;
+                padding: 20px;
+            }
+
+            .mission-section {
+                margin: 30px 20px;
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .about-section h2 {
+                font-size: 32px;
+            }
+
+            .about-section p,
+            .mission-section p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +282,6 @@
             <div class="logo">
                 <img src="../Favicon/favicon-32x32.png" alt="Logo" />
                 <a href="/"><h1>Badge Website</h1></a>
-                
             </div>
             <nav class="nav-links" aria-label="Main navigation">
                 <ul>
@@ -33,19 +294,41 @@
         </div>
     </header>
 
+    <div class="hero">
+        <h1>About Us</h1>
+    </div>
+
+    <section class="mission-section">
+        <h3>Our Mission</h3>
+        <p>
+            At Badge Website, our mission is to create a platform that encourages learning, growth, and recognition. We strive to empower individuals by providing them with the tools to showcase their skills, achievements, and potential.
+        </p>
+    </section>
+
     <section class="about-section" aria-labelledby="about-us">
-        <h2 id="about-us">About Us</h2>
-        <p>Welcome to Badge Website, where we celebrate achievements and empower individuals to showcase their skills and growth.</p>
-        <p>Our platform offers a unique space to earn, display, and share digital badges that recognize your hard work and dedication.</p>
-        <p>Join our community of learners and achievers, and inspire others by sharing your accomplishments in a vibrant and supportive environment.</p>
+        <h2 id="about-us" STYLE="color: white">Who We Are</h2>
+        <p class="highlight">
+            Welcome to Badge Website, where we celebrate achievements and empower individuals to showcase their skills and growth.
+        </p>
+        <p class="highlight">
+            Our platform offers a unique space to earn, display, and share digital badges that recognize your hard work and dedication.
+        </p>
+        <p class="highlight">
+            Join our community of learners and achievers, and inspire others by sharing your accomplishments in a vibrant and supportive environment.
+        </p>
+        <a href="#join-us" class="cta-button">Join Us Today</a>
     </section>
 
     <footer>
         <div class="footer-text">
             <p>
                 Follow us on
-                <a href="https://github.com/rajatuiwebdev/badge-website" aria-label="GitHub Profile">Github</a> |
-                <a href="https://www.linkedin.com/in/rajatrajput2004/" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/rajatuiwebdev/badge-website" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i> Github
+                </a> |
+                <a href="https://www.linkedin.com/in/rajatrajput2004/" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
             </p>
             <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
         </div>

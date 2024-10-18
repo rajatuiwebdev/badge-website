@@ -1,109 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Badge Website</title>
-
+    
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../css/contact.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../Favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../Favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../Favicon/favicon-16x16.png"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="../Favicon/favicon.ico?v=2" />
-  </head>
 
-  <body>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #80deea); /* Gradient background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0056b3; /* Darker blue for header */
+            padding: 20px 0;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            vertical-align: middle;
+            border-radius: 50%; /* Rounded logo */
+            width: 50px; /* Fixed width for logo */
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, border 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+        }
+
+        main {
+            max-width: 700px; /* Reduced width for better layout */
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid #007bff; /* Blue border */
+        }
+
+        h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0056b3; /* Darker blue for headings */
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        /* Input field styles */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #007bff; /* Blue border for inputs */
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f0f8ff; /* Light background color */
+            color: #333; /* Darker text color */
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #0056b3; /* Focus effect */
+            outline: none; /* Remove default outline */
+        }
+
+        /* Textarea specific styles */
+        textarea {
+            resize: vertical; /* Allow vertical resizing */
+            height: 120px; /* Default height */
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            margin-top: 10px; /* Margin for separation */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+            color: #fff;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient background */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s; /* Fade-in animation */
+        }
+
+        .response strong {
+            color: #ffffff; /* Strong text in white */
+        }
+
+        .response span {
+            color: #ffffff; /* Normal text in white */
+        }
+
+        footer {
+            background-color: #0056b3; /* Darker blue for footer */
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .footer-text a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .footer-text a:hover {
+            background-color: rgba(244, 240, 240, 0.2);
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
     <header>
-      <div class="header-container">
-        <div class="logo">
-          <img src="../Favicon/favicon-32x32.png" alt="Logo" />
-          <a href="/"><h1>Badge Website</h1></a>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../Favicon/favicon-32x32.png" alt="Logo" />
+                <a href="/"><h1>Badge Website</h1></a>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./badges.html">Badges</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-links">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./badges.html">Badges</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
+
     <main>
-      <div class="container">
-        <form id="contact" action="#" method="post">
-          <h3>Contact Us</h3>
-          <fieldset>
-            <label for="name">Name</label>
-            <input
-              placeholder="Enter your name"
-              type="text"
-              name="name"
-              tabindex="1"
-              required
-              autofocus
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Email</label>
-            <input
-              placeholder="Your Email Address"
-              type="email"
-              name="email"
-              tabindex="2"
-              required
-            />
-          </fieldset>
-          <fieldset>
-            <label for="message">Message</label>
-            <textarea
-              placeholder="Type your message here...."
-              name="message"
-              tabindex="5"
-              required
-            ></textarea>
-          </fieldset>
-          <button
-            name="submit"
-            type="submit"
-            id="contact-submit"
-            data-submit="...Sending"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+        <div class="container">
+            <form id="contact" onsubmit="return handleSubmit(event)">
+                <h3>Contact Us</h3>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input
+                        id="name"
+                        placeholder="Enter your name"
+                        type="text"
+                        name="name"
+                        tabindex="1"
+                        required
+                        autofocus
+                    />
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        placeholder="Your Email Address"
+                        type="email"
+                        name="email"
+                        tabindex="2"
+                        required
+                    />
+                </fieldset>
+                <fieldset>
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        placeholder="Type your message here...."
+                        name="message"
+                        tabindex="3"
+                        required
+                    ></textarea>
+                </fieldset>
+                <button
+                    name="submit"
+                    type="submit"
+                    id="contact-submit"
+                    data-submit="...Sending"
+                >
+                    Submit
+                </button>
+            </form>
+
+            <div class="response" id="responseMessage"></div> <!-- Response message div -->
+        </div>
     </main>
 
     <footer>
-      <div class="footer-text">
-        <p>
-          Follow us on
-          <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
-          <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
-        </p>
-        <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
-      </div>
+        <div class="footer-text">
+            <p>
+                Follow us on
+                <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
+                <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
+            </p>
+            <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
+        </div>
     </footer>
-  </body>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Basic validation
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            // Construct the response message
+            const responseMessage = `
+                <strong>Thank you for reaching out, ${name}!</strong><br>
+                <span><strong>Email:</strong> ${email}</span><br>
+                <span><strong>Message:</strong> ${message}</span>
+            `;
+
+            // Display the response
+            const responseDiv = document.getElementById('responseMessage');
+            responseDiv.innerHTML = responseMessage;
+            responseDiv.style.display = 'block'; // Show the response div
+            responseDiv.scrollIntoView({ behavior: 'smooth' }); // Scroll to response
+
+            // Optionally clear the form after submission
+            document.getElementById('contact').reset();
+        }
+    </script>
+</body>
 </html>

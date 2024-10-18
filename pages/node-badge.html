@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Badge</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light background for JavaScript theme */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #f7df1e; /* JavaScript yellow theme */
+            padding: 20px 0;
+            color: #323330; /* JavaScript color */
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .badge-info img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .badge-content {
+            max-width: 600px;
+        }
+
+        .badge-content h2 {
+            font-size: 28px;
+            color: #f7df1e;
+        }
+
+        .badge-content p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .badge-content ul {
+            font-size: 16px;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .badge-content ul li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .badge-content a {
+            display: inline-block;
+            background-color: #f7df1e;
+            color: #323330;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .badge-content a:hover {
+            background-color: #e5c300;
+        }
+
+        footer {
+            background: #f7df1e;
+            color: #323330;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-text a {
+            color: #323330;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .footer-text a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .badge-info {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JavaScript Badge</h1>
+    </header>
+
+    <section>
+        <div class="badge-info">
+            <img src="../images/node.png" alt="JavaScript Badge">
+            <div class="badge-content">
+                <p>The Node Badge is awarded to those who have demonstrated an in-depth knowledge of JavaScript. This badge signifies your ability to build dynamic, interactive web applications, manipulate the DOM, and use JavaScript frameworks and libraries effectively.</p>
+                <div class="skills">
+                    <h2>Skills Earned:</h2>
+                    <ul>
+                        <li>Understanding of core JavaScript concepts (variables, loops, functions, etc.)</li>
+                        <li>DOM manipulation and event handling</li>
+                        <li>Working with APIs and asynchronous programming (Promises, async/await)</li>
+                        <li>Proficiency in modern JavaScript ES6+ features (arrow functions, classes, destructuring, etc.)</li>
+                    </ul>
+                </div>
+                <a href="./badges.html">Back to Badges</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-text">
+            <p>
+                Follow us on
+                <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
+                <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
+            </p>
+            <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
