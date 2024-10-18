@@ -154,6 +154,7 @@ header {
 
 }
 
+
 .logo {
   display: flex;
   align-items: center;
@@ -163,12 +164,31 @@ header {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  background-color: #fff; /* Added background for visibility */
+  border-radius: 50%; /* Make the logo circular */
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .logo h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #dfe1e5;
   font-weight: 900;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+  margin: 0;
+}
+
+/* Ensure proper spacing on smaller screens */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
 }
 
 nav {
