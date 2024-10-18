@@ -59,29 +59,35 @@
               placeholder="Enter your name"
               type="text"
               name="name"
+              id="name"
               tabindex="1"
               required
               autofocus
             />
+            <div class="error-message" id="name-error">Please enter your name</div>
           </fieldset>
           <fieldset>
-            <label for="name">Email</label>
+            <label for="email">Email</label>
             <input
               placeholder="Your Email Address"
               type="email"
               name="email"
+              id="email"
               tabindex="2"
               required
             />
+            <div class="error-message" id="email-error">Please enter a valid email address</div>
           </fieldset>
           <fieldset>
             <label for="message">Message</label>
             <textarea
               placeholder="Type your message here...."
               name="message"
+              id="message"
               tabindex="5"
               required
             ></textarea>
+            <div class="error-message" id="message-error">Please enter your message</div>
           </fieldset>
           <button
             name="submit"
@@ -105,5 +111,55 @@
         <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contact');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          let isValid = true;
+
+          // Check name
+          if (nameInput.value.trim() === '') {
+            document.getElementById('name-error').style.display = 'block';
+            isValid = false;
+          } else {
+            document.getElementById('name-error').style.display = 'none';
+          }
+
+          // Check email
+          if (emailInput.value.trim() === '' || !isValidEmail(emailInput.value)) {
+            document.getElementById('email-error').style.display = 'block';
+            isValid = false;
+          } else {
+            document.getElementById('email-error').style.display = 'none';
+          }
+
+          // Check message
+          if (messageInput.value.trim() === '') {
+            document.getElementById('message-error').style.display = 'block';
+            isValid = false;
+          } else {
+            document.getElementById('message-error').style.display = 'none';
+          }
+
+          if (isValid) {
+            // Form is valid, you can submit it here or perform any other action
+            alert('Form submitted successfully!');
+            form.reset(); // Clear the form
+          }
+        });
+
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+      });
+    </script>
   </body>
 </html>

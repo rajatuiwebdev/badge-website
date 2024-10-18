@@ -58,6 +58,7 @@ fieldset label {
     margin: 5px 0 10px;
     padding: 10px;
     border-radius: 20px;
+    color: #333;
 }
 
 #contact input[type="text"]:hover,
@@ -97,4 +98,11 @@ fieldset label {
 #contact textarea:focus {
     outline: 0;
     border: 1px solid #aaa;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
 }
