@@ -1,38 +1,20 @@
-.about-section {
-    margin-top: 70px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, rgba(28, 31, 36, 0.8), rgba(45, 59, 69, 0.8), rgba(0, 0, 0, 0.8)); 
-    color: #dfe1e5; 
-    text-align: center;
-    height: 82vh;  
-    background-repeat: no-repeat;
-    background-size: cover; 
-    position: relative; 
-    overflow: hidden; 
+/* Logo Styling */
+.logo {
+    width: 150px; /* Adjust size */
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6)); /* Shadow for contrast */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth effect */
 }
 
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+/* Hover Effect */
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom */
+    opacity: 0.9;
 }
 
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-}
-
-.about-section a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
-    color: white; 
-    text-decoration: none;
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
-}
-
-.about-section a:hover {
-    background-color: #0056b3; 
+/* Responsive Logo */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px; /* Adjust size for mobile */
+    }
 }
