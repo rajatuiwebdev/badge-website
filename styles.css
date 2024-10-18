@@ -12,15 +12,66 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light background */
+  background-color: #ebe5e5; /* Light background */
   color: #333; /* Dark text color */
   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark Theme Styles */
-body.dark-theme {
+body.active {
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   color: #dfe1e5; /* Light text color */
+}
+.logo{
+  cursor: pointer;
+}
+
+
+.mode{
+  width: 70px;
+  height: 35px;
+  position:relative;
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4) ;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: center;
+  top: 5px; /* Adjust this value as needed */
+  margin-top: 5px; /* Adjust this value as needed */
+  transform: translateY(-50%);
+}
+
+label::after{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background: linear-gradient(180deg,#ffcc89,#d8860b);
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.darkbut{
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.darkbut:checked + .mode {
+  background: #242424; /* Background when checked */
+}
+
+.darkbut:checked + .mode::after {
+  left: 38px; /* Move the knob to the right */
+  background: linear-gradient(180deg, #777, #3a3a3a); /* Knob background when checked */
+}
+
+.darkbut:active + .mode::after {
+  width: 26px; /* Change knob width on active */
 }
 
 .header-container {
@@ -64,7 +115,7 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 
-body {
+body.active {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -110,7 +161,7 @@ body {
   animation: fall linear forwards, fadeOut ease-out forwards;
 }
 
-body {
+body.active {
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   font-family: "Poppins", sans-serif;
   color: #dfe1e5; /* Light text color */

@@ -30,20 +30,37 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="Favicon/favicon.ico?v=2" />
   </head>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const styleToggleCheckbox = document.getElementById('darkmode-toggle');
+
+        styleToggleCheckbox.addEventListener('change', () => {
+            // Toggle the 'active' class on the body element
+            document.body.classList.toggle('active', styleToggleCheckbox.checked);
+        });
+    });
+</script>
+
+
+ 
   <body>
     <!-- Header Section -->
     <header>
       <div class="header-container">
         <div class="logo">
           <img src="Favicon/favicon-32x32.png" alt="Logo" />
-          <a href="/"><h1>Badge Website</h1></a>
+          <a href="./index.html"><h1>Badge Website</h1></a>
         </div>
         <nav class="nav-links">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="./pages/about.html">About</a></li>
             <li><a href="./pages/contact.html">Contact</a></li>
             <li><a href="./pages/badges.html">Badges</a></li>
+            <li>
+              <input type="checkbox" id="darkmode-toggle" class="darkbut"/>
+              <label for = "darkmode-toggle" class="mode"></label>
+            </li>
           </ul>
         </nav>
       </div>
