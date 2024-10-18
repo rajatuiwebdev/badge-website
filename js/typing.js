@@ -90,9 +90,10 @@ themeToggleButton.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
     const isDarkTheme = body.classList.contains('dark-theme');
     themeToggleButton.innerHTML = isDarkTheme 
-        ? '<i class="fas fa-moon"></i>' 
-        : '<i class="fas fa-sun"></i>';
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const sidebar = document.querySelector('.sidebar');
