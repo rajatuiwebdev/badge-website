@@ -1,0 +1,121 @@
+/* Base Styles for the form */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+    color: #dfe1e5;
+    
+   
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    backdrop-filter: blur(15px); /* Blur effect */
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    left: 35%;
+    
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+  }
+  
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #58a6ff; /* Accent color for headings */
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #dfe1e5;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button styling */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #58a6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #4183c4;
+    transform: scale(1.05); /* Button enlarges slightly on hover */
+  }
+  
+  /* Links to switch between forms */
+  p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  a {
+    color: #58a6ff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #4183c4;
+  }
+  
+  /* Hide the login form by default */
+  #login-container {
+    display: none;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .form-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  }
+  
+  /* Animations for smooth transitions */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
