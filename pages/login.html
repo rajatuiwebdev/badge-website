@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Badge Website</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="../Favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../Favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../Favicon/favicon-16x16.png"
+  />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" href="../Favicon/favicon.ico?v=2" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+          <div class="logo">
+            <img src="../Favicon/favicon-32x32.png" alt="Logo" />
+            <a href="/"><h1>Badge Website</h1></a>
+          </div>
+          <nav class="nav-links">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./badges.html">Badges</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div class="container">
+        <div id="login">
+            <h2>Login to Your Account</h2>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="links">
+                <p>Don't have an account? <a href="./register.html">Register here</a></p>
+                <p><a href="./forgot-password.html">Forgot Password?</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">
+          <p>
+            Follow us on
+            <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
+            <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
+          </p>
+          <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
+        </div>
+      </footer>
+</body>
+</html>
