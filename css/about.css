@@ -1,38 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1c1f24;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: #dfe1e5;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 20px;
+}
+
+.nav-links ul li a {
+    color: #dfe1e5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #58a6ff;
+}
+
 .about-section {
-    margin-top: 70px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, rgba(28, 31, 36, 0.8), rgba(45, 59, 69, 0.8), rgba(0, 0, 0, 0.8)); 
-    color: #dfe1e5; 
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 82vh;  
-    background-repeat: no-repeat;
-    background-size: cover; 
-    position: relative; 
-    overflow: hidden; 
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-section h2 {
-    font-size: 36px;
+    font-size: 2rem;
+    color: #000450;
     margin-bottom: 20px;
+    animation: slideIn 0.5s ease;
 }
 
-.about-section p {
-    font-size: 18px;
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-content p {
+    font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+ 
+    color: #0401a1;
 }
 
-.about-section a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
-    color: white; 
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1c1f24;
+    color: #dfe1e5;
+    margin-top: 40px;
+    animation: fadeIn 1s ease;
+}
+
+.footer-text a {
+    color: #58a6ff;
     text-decoration: none;
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
+    transition: color 0.3s;
 }
 
-.about-section a:hover {
-    background-color: #0056b3; 
+.footer-text a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
 }
