@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="../css/signin.css">
+</head> 
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-toggle">
+                <button id="login-toggle" class="active">Log In</button>
+                <button id="signup-toggle">Sign Up</button>
+            </div>
+
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+                <p class="switch-form">Don't have an account? <span id="go-to-signup">Sign Up</span></p>
+            </form>
+
+            <form id="signup-form" class="hidden">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+                <p class="switch-form">Already have an account? <span id="go-to-login">Log In</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginToggle = document.getElementById('login-toggle');
+            const signupToggle = document.getElementById('signup-toggle');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            const goToSignup = document.getElementById('go-to-signup');
+            const goToLogin = document.getElementById('go-to-login');
+
+            // Toggle to show login form
+            loginToggle.addEventListener('click', () => {
+                loginForm.classList.remove('hidden');
+                signupForm.classList.add('hidden');
+                loginToggle.classList.add('active');
+                signupToggle.classList.remove('active');
+            });
+
+            // Toggle to show signup form
+            signupToggle.addEventListener('click', () => {
+                signupForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+                signupToggle.classList.add('active');
+                loginToggle.classList.remove('active');
+            });
+
+            // Switch to signup form when clicking on "Sign Up"
+            goToSignup.addEventListener('click', () => {
+                signupToggle.click();
+            });
+
+            // Switch to login form when clicking on "Log In"
+            goToLogin.addEventListener('click', () => {
+                loginToggle.click();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
