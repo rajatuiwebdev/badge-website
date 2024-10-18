@@ -12,6 +12,65 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="../Favicon/favicon.ico?v=2">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .nav-links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #FFD700; /* Gold color on hover */
+        }
+        .about-section {
+            padding: 40px;
+            background-color: white;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +79,6 @@
             <div class="logo">
                 <img src="../Favicon/favicon-32x32.png" alt="Logo" />
                 <a href="/"><h1>Badge Website</h1></a>
-                
             </div>
             <nav class="nav-links" aria-label="Main navigation">
                 <ul>
@@ -38,17 +96,11 @@
         <p>Welcome to Badge Website, where we celebrate achievements and empower individuals to showcase their skills and growth.</p>
         <p>Our platform offers a unique space to earn, display, and share digital badges that recognize your hard work and dedication.</p>
         <p>Join our community of learners and achievers, and inspire others by sharing your accomplishments in a vibrant and supportive environment.</p>
-    </section>
+    </section> <!-- Corrected closing tag here -->
 
     <footer>
-        <div class="footer-text">
-            <p>
-                Follow us on
-                <a href="https://github.com/rajatuiwebdev/badge-website" aria-label="GitHub Profile">Github</a> |
-                <a href="https://www.linkedin.com/in/rajatrajput2004/" aria-label="LinkedIn Profile">LinkedIn</a>
-            </p>
-            <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
-        </div>
+        <p>&copy; 2024 Badge Website. All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
 </body>
+
 </html>
