@@ -1,10 +1,9 @@
-
 /* Reset styles */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
-  color: #fff;
 }
 
 /* Base Styles */
@@ -12,137 +11,24 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light background */
-  color: #333; /* Dark text color */
+  background-color: #f4f4f4;
+  color: #333;
   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark Theme Styles */
 body.dark-theme {
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
-  color: #dfe1e5; /* Light text color */
-}
-
-.header-container {
-  display: flex; /* Flexbox for aligning items */
-  justify-content: space-between; /* Space between title and nav */
-  align-items: center; /* Center vertically */
-}
-
-header {
-  background: rgba(144, 214, 15, 0.9); /* Blue background color */
-  color: white; /* White text color */
-  padding: 20px; /* Padding around the header */
-}
-
-h1 {
-  font-size: 24px; /* Font size for header title */
-}
-
-nav ul {
-  list-style: none; /* Remove bullet points */
-  display: flex; /* Flexbox for horizontal layout */
-}
-
-nav ul li {
-  margin-left: 20px; /* Space between nav items */
-}
-
-nav ul li a {
-  color: white; /* Link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s; /* Smooth color transition */
-}
-
-nav ul li a:hover {
-  color: #ff85a1; /* Change color on hover */
-}
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
   color: #dfe1e5;
-  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
 }
 
-/* Keyframes for Confetti Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.2;
-  }
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-    opacity: 1;
-  }
-}
-
-.confetti {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background-color: rgb(97, 5, 5);
-  top: -50px;
-  animation: fall linear forwards, fadeOut ease-out forwards;
-}
-
-body {
-  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
-  font-family: "Poppins", sans-serif;
-  color: #dfe1e5; /* Light text color */
-  margin: 0; /* Remove default margin */
-
-}
-
-.badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  height: calc(100vh - 60px);
-}
-
-.badge img {
-  width: 250px;
-   height: 210px;  /* reduce the height of badge image for better user experience */
-  transition: transform 0.3s ease; /* Smooth transition */
-}
-
-
-/* HEADER CSS */
-/* Header container styling */
+/* Header Styles */
 header {
   display: block;
   width: 100%;
   padding: 20px;
-  background-color: #1c1f24; /* Dark background */
-  border-bottom: 2px solid #58a6ff; /* Border for separation */
+  background-color: #1c1f24;
+  border-bottom: 2px solid #58a6ff;
 }
 
 .header-container {
@@ -151,7 +37,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-
+  padding: 0 20px;
 }
 
 .logo {
@@ -189,7 +75,7 @@ nav {
   margin-left: 20px;
 }
 
- ul li a {
+ul li a {
   height: 100%;
   padding: 0;
   display: flex;
@@ -204,136 +90,87 @@ nav {
   color: #58a6ff;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 2px;
-  height: 100vh;
-  max-width: 250px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
+/* Badge Grid Styles */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.badge-container {
+  background: linear-gradient(
+    35deg,
+    rgba(10, 151, 207, 0.9) 50%,
+    rgba(15, 61, 214, 0.9) 50%
+  );
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.badge-container:hover {
+  transform: scale(1.05);
+}
+
+.badge {
+  height: auto;
+  min-height: 400px;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar li {
+.badge img {
   width: 100%;
-  height: 120px !important;
-  margin: 5px 0;
-}
-
-.sidebar a {
-  width: 100%;
-  height: 120px !important;
-  display: block;
-}
-
-.menu-btn {
-  display: none;
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .hideOnMobile {
-    display: none;
-  }
-
-  .showOnMobile {
-      display: flex;
-  }
-
-  .menu-btn {
-      display: block;
-  }
-}
-
-/* For smaller devices */
-@media (max-width: 480px) {
-  .sidebar {
-    width: 100% ;
-  }
-}
-
-.badge-details {
-  text-align: center;
-  margin-top: 15px; /* Adjust spacing */
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .badge-details h2 {
-  font-size: 24px; /* Increase heading size */
-  margin-bottom: 5px; /* Add spacing between heading and text */
-  color: #fff; /* White heading for better contrast */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .badge-details p {
-  font-size: 18px; /* Adjust paragraph size */
-  margin: 0; /* Remove default margin for tighter spacing */
-}
-
-.badge-details strong {
-  color: #e8d07e; /* Accent color for awardee email */
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #fff;
 }
 
 .download-card {
-  margin-top: 20px; /* Adjust margin for spacing */
+  margin-top: 15px;
 }
 
 .download-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #58a6ff;
+  background-color: #4CAF50;
   color: white;
-  border: none;
-  border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
-.qr-download-card{
-  margin-top: 15px;
-}
+
 .download-button:hover {
-  background-color: #4183c4;
-  transform: scale(1.05); /* Slightly increases the button size */
-
-}
-
-footer {
-  min-height: 15vh;
-  text-align: center;
-  padding: 40px;
-  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
-  color: #dfe1e5;
-  width: 100%;
-  border-top: 3px solid #58a6ff;
-}
-
-footer p {
-  font-weight: 900;
-}
-
-footer a {
-  color: #4183c4;
-  font-weight: 900;
+  background-color: #45a049;
 }
 
 .share-section {
-  text-align: center;
-  margin-top: 20px;
- margin-bottom: 34px;   /* add margin bottom for proper visibility of share section */
+  margin-top: 15px;
+  margin-bottom: 34px;
 }
 
+/* Share Section Styles */
 .share-section p {
   font-size: 18px;
   color: #fff;
@@ -356,83 +193,46 @@ footer a {
   transition: color 0.3s ease;
 }
 
-/* Twitter Button */
 .share-button.twitter {
   background-color: #1da1f2;
 }
 
-.share-button.twitter:hover {
-  transform: scale(1.2);
-  box-shadow: 0 4px 10px rgba(29, 161, 242, 0.5);
-}
-
-/* LinkedIn Button */
 .share-button.linkedin {
   background-color: #0077b5;
 }
 
-.share-button.linkedin:hover {
-  transform: scale(1.2);
-  box-shadow: 0 4px 10px rgba(0, 119, 181, 0.5);
-}
-
-/* Facebook Button */
 .share-button.facebook {
   background-color: #3b5998;
 }
 
-.share-button.facebook:hover {
-  transform: scale(1.2);
-  box-shadow: 0 4px 10px rgba(59, 89, 152, 0.5);
-}
-
-/* Icon Colors on Hover */
-.share-button:hover i {
-  color: #fff;
-}
-
-/* Adding smooth hover effects */
 .share-button:hover {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Confetti Animation */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: scale(0.95);
-  }
-  to {
-      opacity: 1;
-      transform: scale(1);
-  }
+/* Footer Styles */
+footer {
+  min-height: 15vh;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
+  color: #dfe1e5;
+  width: 100%;
+  border-top: 3px solid #58a6ff;
+  box-sizing: border-box;
 }
 
-@keyframes fadeOut {
-  from {
-      opacity: 1;
-  }
-  to {
-      opacity: 0.2;
-  }
+footer p {
+  font-weight: 900;
+  margin-bottom: 10px;
 }
 
-.confetti {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background-color: rgb(97, 5, 5);
-  top: -50px;
-  animation: fall linear forwards, fadeOut ease-out forwards; /* Add fadeOut */
+footer a {
+  color: #4183c4;
+  font-weight: 900;
 }
 
-@keyframes fall {
-  to {
-      transform: translateY(100vh);
-      opacity: 1;
-  }
-}
-
+/* Search bar styles */
 .search-bar-container {
   margin: 20px auto;
   text-align: center;
@@ -454,7 +254,7 @@ footer a {
 }
 
 #badge-search:focus {
-  border-color: #007bff; 
+  border-color: #007bff;
 }
 
 .search-button {
@@ -476,112 +276,106 @@ footer a {
   background-color: #084298;
 }
 
-.badge-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .badge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-   margin-top: 55px;  /* add margin top for badge image proper visibility */
-}
-
-.badge-details h2 {
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
-.badge-details p {
-  margin: 5px 0;
-}
-
-.download-button, .share-button {
-  background-color: #007bff;
-  color: white;
-  padding: 15px;
-  text-decoration: none;
-  border-radius: 1000px;
-  margin-top: 10px;
-}
-
-.download-button:hover, .share-button:hover {
-  background-color: #0056b3;
-}
-
-.share-section a {
-  margin-right: 10px;
-}
-/* Styles for the badge cards */
-.badges-section {
-  padding: 20px;
-  background-color: #f9f9f9;
-  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
-}
-
-.badges-container {
-  display: grid;
-  grid-template-columns: repeat(3,1fr); /* Three equal-width columns */
-  gap: 30px; /* Space between cards */
-  justify-items: center;
-  align-items: center;
-}
-
-.badge-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-
-.badge-card img {
-  max-width: 100px;
-  margin-bottom: 15px;
-}
-
-.badge-card h3 {
-  font-size: 1.2em;
-  color: #3a3a3a;
-  margin-bottom: 10px;
-}
-
-.badge-card p {
-  font-size: 0.9em;
-  color: #2b2b2b;
-}
-
-.badge-card:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-  .badges-container {
-      grid-template-columns: repeat(2, 1fr); /* Two badges per row on smaller screens */
-  }
-}
-
-@media (max-width: 500px) {
-  .badges-container {
-      grid-template-columns: 1fr; /* One badge per row on very small screens */
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-}
-@media (min-width:768px) {
-  .hideOnMobile{
+  .nav-links {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .badge-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+
+  .badge-container {
+    transform: scale(1);
+  }
+
+  .hideOnMobile {
     display: none;
   }
-  
 
+  .showOnMobile {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-grid {
+    padding: 10px;
+  }
+
+  .badge-container {
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* Additional styles */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0.2; }
+}
+
+.confetti {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(97, 5, 5);
+  top: -50px;
+  animation: fall linear forwards, fadeOut ease-out forwards;
 }
