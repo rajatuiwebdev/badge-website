@@ -585,3 +585,68 @@ footer a {
   
 
 }
+<!--------FAQ------->
+
+.faq{
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+
+}
+
+
+
+.faq h2{
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+}
+.accordion{
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+.accordion li{
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: linear-gradient(300deg ,#00435f,#2786cf ,rgb(157, 48, 153));
+  /*background: #303030;*/
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label::after{
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+
+}
+input[type="radio"]{
+  display: none;
+}
+.accordion .content{
+  background: linear-gradient(300deg ,#00435f,#369ae6 ,rgb(164, 53, 161));
+ /* background: #303030;*/
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s,padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+  transform: rotate(135deg);
+}
