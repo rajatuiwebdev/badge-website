@@ -7,27 +7,42 @@
   color: #fff;
 }
 
-/* Base Styles */
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4; /* Light background */
-  color: #333; /* Dark text color */
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark Theme Styles */
-body.dark-theme {
-  background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
-  color: #dfe1e5; /* Light text color */
-}
 
 .header-container {
-  display: flex; /* Flexbox for aligning items */
-  justify-content: space-between; /* Space between title and nav */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+header {
+  background: rgba(144, 214, 15, 0.9);
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff85a1;
+}
+
 
 header {
   background: rgba(144, 214, 15, 0.9); /* Blue background color */
