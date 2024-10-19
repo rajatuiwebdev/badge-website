@@ -188,8 +188,7 @@ nav {
 .nav-links ul li {
   margin-left: 20px;
 }
-
- ul li a {
+ul li a {
   height: 100%;
   padding: 0;
   display: flex;
@@ -199,6 +198,7 @@ nav {
   font-size: 18px;
   transition: color 0.3s ease;
 }
+
 
 .nav-links ul li a:hover {
   color: #58a6ff;
@@ -370,6 +370,19 @@ footer a {
 .share-button.linkedin {
   background-color: #0077b5;
 }
+#copy-link{
+  width:50px;
+  height:50px;
+  background-color:#083e77;
+  border:none;
+  position:absolute;
+  top:100px ;
+  left:400px
+  
+
+ 
+}
+ 
 
 .share-button.linkedin:hover {
   transform: scale(1.2);
@@ -385,6 +398,7 @@ footer a {
   transform: scale(1.2);
   box-shadow: 0 4px 10px rgba(59, 89, 152, 0.5);
 }
+
 
 /* Icon Colors on Hover */
 .share-button:hover i {
