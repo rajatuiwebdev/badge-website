@@ -5,6 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badges</title>
     <link rel="stylesheet" href="../styles.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6; /* Light grey background */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007bff, #00bfff); /* Gradient background */
+            padding: 20px 0;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, border 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .badges-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center; /* Center text in the section */
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px; /* Space below the title */
+        }
+
+        .badges-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Responsive grid layout */
+            gap: 30px; /* Space between badges */
+        }
+
+        .badge-card {
+            background-color: #fff;
+            border-radius: 12px; /* Rounded corners */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden; /* To hide overflow */
+        }
+
+        .badge-card img {
+            width: 90px; /* Increased image size */
+            height: 90px; /* Increased image size */
+            margin-bottom: 15px; /* Space between image and text */
+        }
+
+        .badge-card h3 {
+            margin: 10px 0 5px;
+            font-size: 20px; /* Larger font size for badge title */
+            color: #007bff; /* Badge title color */
+        }
+
+        .badge-card p {
+            font-size: 14px;
+            color: #666; /* Description text color */
+        }
+
+        .badge-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+        }
+
+        .badge-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 123, 255, 0.1); /* Light blue overlay */
+            border-radius: 12px;
+            z-index: 0;
+            transition: opacity 0.3s; /* Fade effect */
+            opacity: 0; /* Initially hidden */
+        }
+
+        .badge-card:hover::before {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        footer {
+            background: linear-gradient(90deg, #007bff, #00bfff); /* Gradient background */
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .footer-text a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .footer-text a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+        }
+
+        /* Media queries for enhanced responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 0; /* Adjust header padding */
+            }
+
+            nav ul li {
+                margin: 0 15px; /* Decrease margin for nav items */
+            }
+
+            .badge-card {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            h2 {
+                font-size: 28px; /* Adjust title size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column; /* Stack nav items on small screens */
+                align-items: center; /* Center nav items */
+            }
+
+            nav ul li {
+                margin: 10px 0; /* Vertical spacing for nav items */
+            }
+
+            footer {
+                padding: 15px 0; /* Adjust footer padding */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,11 +199,10 @@
             <div class="logo">
                 <img src="../Favicon/favicon-32x32.png" alt="Logo" />
                 <a href="/"><h1>Badge Website</h1></a>
-                
             </div>
             <nav class="nav-links">
                 <ul>
-                    <li><a  href="../index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./badges.html">Badges</a></li>
@@ -26,54 +212,54 @@
     </header>
 
     <section class="badges-section">
+        <h2>Our Badges</h2>
         <div class="badges-container">
-            <div class="badge-card">
+            <a href="./html-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
                 <img src="../images/html.png" alt="HTML Badge">
                 <h3>HTML Badge</h3>
                 <p>Earned for mastering HTML.</p>
-            </div>
-            <div class="badge-card">
+            </a>
+            <a href="./css-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
                 <img src="../images/css.png" alt="CSS Badge">
                 <h3>CSS Badge</h3>
                 <p>Earned for mastering CSS.</p>
-            </div>
-            <div class="badge-card">
+            </a>
+            <a href="./js-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
                 <img src="../images/js.png" alt="JavaScript Badge">
                 <h3>JavaScript Badge</h3>
                 <p>Earned for mastering JavaScript.</p>
-            </div>
-            <div class="badge-card">
-                <img src="../images/react.png" alt="CSS Badge">
+            </a>
+            <a href="./react-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
+                <img src="../images/react.png" alt="React Badge">
                 <h3>React Badge</h3>
                 <p>Earned for mastering React.</p>
-            </div>
-            <div class="badge-card">
-                <img src="../images/an.png" alt="JavaScript Badge">
+            </a>
+            <a href="./angular-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
+                <img src="../images/an.png" alt="Angular Badge">
                 <h3>Angular Badge</h3>
                 <p>Earned for mastering Angular.</p>
-            </div>
-            <div class="badge-card">
-                <img src="../images/node.png" alt="CSS Badge">
-                <h3>Node js Badge</h3>
-                <p>Earned for mastering Node js.</p>
-            </div>
-            <div class="badge-card">
-                <img src="../images/mo.png" alt="JavaScript Badge">
+            </a>
+            <a href="./node-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
+                <img src="../images/node.png" alt="Node.js Badge">
+                <h3>Node.js Badge</h3>
+                <p>Earned for mastering Node.js.</p>
+            </a>
+            <a href="./mongodb-badge.html" class="badge-card"> <!-- Added anchor tag for navigation -->
+                <img src="../images/node-mongo.png" alt="MongoDB Badge">
                 <h3>MongoDB Badge</h3>
                 <p>Earned for mastering MongoDB.</p>
-            </div>
-            
+            </a>
         </div>
     </section>
 
     <footer>
         <div class="footer-text">
-          <p>
-            Follow us on
-            <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
-            <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
-          </p>
-          <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
+            <p>
+                Follow us on
+                <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
+                <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
+            </p>
+            <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
         </div>
     </footer>
 </body>
