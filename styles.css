@@ -57,6 +57,25 @@ nav ul li a {
 nav ul li a:hover {
   color: #ff85a1; /* Change color on hover */
 }
+/* Style for the Log In button */
+.nav-links ul li .login-button {
+  background-color: #0a97cf;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links ul li .login-button:hover {
+  background-color: #0f3dd6;
+}
+
 /* General Styles */
 * {
   margin: 0;
