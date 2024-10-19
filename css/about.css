@@ -1,38 +1,49 @@
 .about-section {
     margin-top: 70px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, rgba(28, 31, 36, 0.8), rgba(45, 59, 69, 0.8), rgba(0, 0, 0, 0.8)); 
-    color: #dfe1e5; 
+    padding-top: 50px;
+    background: linear-gradient(135deg, rgba(28, 31, 36, 0.85), rgba(45, 59, 69, 0.85), rgba(0, 0, 0, 0.85)); 
+    color: #f0f0f0; 
     text-align: center;
-    height: 82vh;  
+    height: 90vh;  
     background-repeat: no-repeat;
     background-size: cover; 
     position: relative; 
     overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
 }
 
 .about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .about-section a {
     display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
+    padding: 12px 25px; 
+    background-color: #ff5722; 
     color: white; 
     text-decoration: none;
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
+    border-radius: 30px; 
+    transition: background-color 0.4s, transform 0.3s ease; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 }
 
 .about-section a:hover {
-    background-color: #0056b3; 
+    background-color: #e64a19; 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
