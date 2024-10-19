@@ -58,6 +58,7 @@ fieldset label {
     margin: 5px 0 10px;
     padding: 10px;
     border-radius: 20px;
+    color:black;
 }
 
 #contact input[type="text"]:hover,
