@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(60deg,#2b2fff, #f70ed0, #029aff, #00f7ff, #9400d3, #ff007f);
+    background: linear-gradient(60deg,#000000, #1d1c1c, #232324, #303131, #363536, #4e4c4d);
     background-size: 300% 300%;
     animation: gradientMove 10s ease infinite;
     color: white;
@@ -27,7 +27,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: linear-gradient(45deg, #2b2fff, #f70ed0, #029aff, #00f7ff, #9400d3, #ff007f);
+    background-color: linear-gradient(45deg, #fefeff, #f70ed0, #029aff, #00f7ff, #9400d3, #ff007f);
     padding: 10px 0;
     z-index: 1000;
   }
@@ -36,9 +36,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg,#0a2ef7, #f70ed0);
+    background: linear-gradient(45deg,#ff7300, #f7c10e);
     padding: 20px 15px;
-    border-radius: 12px;
+    border-radius: 0px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
   
@@ -63,7 +63,7 @@
     left: 0;
     height: 3px;
     width: 0%;
-    background: linear-gradient(45deg, #ff007f, #ff8c00, #00ffbf, #00f7ff, #9400d3, #ff007f);
+    background: linear-gradient(45deg, #00aeff, #00b7ff);
     background-size: 100% 100%;
     animation: gradientMove 1s ease infinite;
     border-radius: 12px;
@@ -102,7 +102,7 @@
   }
   
   .contributor {
-    background-color: #008cff;
+    background-color: #ff7b00;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -111,7 +111,7 @@
   
   .contributor:hover {
     transform: scale(1.05);
-    background-color: #0b0542;
+    background-color: #ffd900;
   }
   
   .contributor img {
