@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Rajat Rajput",
+        "action": "Created the website",
+        "github_url": "https://github.com/rajatuiwebdev"
+    },
+    {
+        "name": "Pankaj Pandey",
+        "action": "Removed a bug from the website to allow contributor list to be displayed.",
+        "github_url": "https://github.com/mrpankajpandey"
+    },
+    {
+        "name":"Bhumit Gupta",
+        "action":"Added New Navbar, Footer and changed the background of the website",
+        "github_url": "https://github.com/Bhumitg07205"
+    },
+    {
+        "name":"Kishore K",
+        "action":"Created Login page and footer.",
+        "github_url": "https://github.com/Kish0reo07"
+    },
+    {
+        "name":"Sayantan Saha",
+        "action":"Made the Proper Indentation of the Body and Improvements in the Form",
+        "github_url": "https://github.com/Sayantan1024"
+    },
+    {
+        "name":"Swapnanil Manna",
+        "action":"Added contributors section and reformat the website completely and give a clean slick appearance. ",
+        "github_url": "https://github.com/Swapnanilmanna1701"
+    },
+    {
+        "name":"Kanchan Rai",
+        "action":"Added downloaded badges button. ",
+        "github_url": "https://github.com/kanchanraiii"
+    }
+    
+]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contributors.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li class="center"><a href="./contributors.html">Contributors</a></li>
+          <li class="upward"><a href="../pages/about.html">About</a></li>
+          <li class="forward"><a href="./badges.html">Badge</a></li>
+          <li class="forward"><a href="./contact.html">Contact</a></li>
+    
+          <!-- Login buttons (Google and Facebook) -->
+          
+    
+          <!-- Display logged-in user name -->
+          <li id="user-name" style="float: right; margin-right: 20px;"></li>
+        </ul>
+      </nav>
+    <section id="contributors">
+        <h2>Our Contributors</h2>
+        <div class="contributor-grid" id="contributor-grid">
+          <!-- Contributors will be dynamically injected here by JavaScript -->
+        </div>
+      </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          fetch('../awardee.json')
+            .then(response => response.json())
+            .then(data => {
+              const contributorGrid = document.getElementById('contributor-grid');
+    
+              data.forEach(contributor => {
+                const contributorElement = document.createElement('div');
+                contributorElement.className = 'contributor';
+                
+                const githubUrl = contributor.github_url;
+                const username = githubUrl.match(/https:\/\/github\.com\/([^\/]+)/)[1];
+    
+                if (username) {
+                  fetch(`https://api.github.com/users/${username}`)
+                    .then(response => response.json())
+                    .then(data => {
+                      if (data && data.avatar_url) {
+                        const avatar_img = data.avatar_url;
+                        contributorElement.innerHTML = `
+                          <img src="${avatar_img}" alt="Contributor Avatar">
+                          <a href="${contributor.github_url}" target="_blank">${contributor.name}</a>
+                          <br>
+                          <p>${contributor.action}</p>
+                        `;
+                      }
+                    });
+                }
+    
+                contributorGrid.appendChild(contributorElement);
+              });
+            });
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    
+</body>
+</html>
