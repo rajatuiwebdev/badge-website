@@ -63,7 +63,7 @@
     left: 0;
     height: 3px;
     width: 0%;
-    background: linear-gradient(45deg, #00aeff, #00b7ff);
+    background: linear-gradient(45deg, #ffffff, #ffffff);
     background-size: 100% 100%;
     animation: gradientMove 1s ease infinite;
     border-radius: 12px;

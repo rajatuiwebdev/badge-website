@@ -142,7 +142,7 @@ header {
   width: 100%;
   padding: 20px;
   background-color: #1c1f24; /* Dark background */
-  border-bottom: 2px solid #58a6ff; /* Border for separation */
+  border-bottom: 2px solid #ff8800; /* Border for separation */
 }
 
 .header-container {
@@ -198,11 +198,17 @@ nav {
   color: #dfe1e5;
   font-size: 18px;
   transition: color 0.3s ease;
+  animation: gradientMove 1s ease infinite;
 }
 
 .nav-links ul li a:hover {
-  color: #58a6ff;
+  color: #ff7300;
+  transform: scale(1.15);
+  transition: 0.3s ease;
+  
+  
 }
+
 
 .sidebar {
   position: fixed;
@@ -316,7 +322,7 @@ footer {
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
   color: #dfe1e5;
   width: 100%;
-  border-top: 3px solid #58a6ff;
+  border-top: 3px solid #2f3e50;
 }
 
 footer p {
