@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Prociono&display=swap');
+
 
 /* Reset styles */
 * {
@@ -128,6 +130,8 @@ body {
   height: calc(100vh - 60px);
 }
 
+
+
 .badge img {
   width: 250px;
    height: 210px;  /* reduce the height of badge image for better user experience */
@@ -172,7 +176,6 @@ header {
 }
 
 nav {
-  font-size: 18px;
   display: flex;
   align-items: center;
 }
@@ -186,7 +189,8 @@ nav {
 }
 
 .nav-links ul li {
-  margin-left: 20px;
+  margin-left: 25px;
+  font-family: "Prociono";
 }
 
  ul li a {
@@ -196,7 +200,7 @@ nav {
   align-items: center;
   text-decoration: none;
   color: #dfe1e5;
-  font-size: 18px;
+  font-size: 22px;
   transition: color 0.3s ease;
 }
 
@@ -268,6 +272,7 @@ nav {
 .badge-details {
   text-align: center;
   margin-top: 15px; /* Adjust spacing */
+  font-family: "Prociono";
 }
 
 .badge-details h2 {
@@ -523,12 +528,9 @@ footer a {
   background: linear-gradient(135deg, #1c1f24, #2d3b45, #000000);
 }
 
-.badges-container {
-  display: grid;
-  grid-template-columns: repeat(3,1fr); /* Three equal-width columns */
-  gap: 30px; /* Space between cards */
-  justify-items: center;
-  align-items: center;
+.badge-container:hover {
+  box-shadow: 0px 0px 30px beige;
+  transition: all 0.2s;
 }
 
 .badge-card {
