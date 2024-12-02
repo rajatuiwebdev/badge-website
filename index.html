@@ -1,369 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Badge Website</title>
-
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./Favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./Favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./Favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" href="Favicon/favicon.ico?v=2" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To-Do List App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <!-- Header Section -->
-    <header>
-      <div class="header-container">
-        <div class="logo">
-          <img src="Favicon/favicon-32x32.png" alt="Logo" />
-          <a href="/"><h1>Badge Website</h1></a>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-purple-600">To-Do List</a>
+        <ul class="flex space-x-4">
+          <li><a href="error.html" class="hover:text-blue-600">Upcoming Tasks</a></li>
+          <li><a href="error.html" class="hover:text-blue-600">Friends</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Block -->
+    <section class="flex justify-center items-center h-screen bg-gradient-to-b from-purple-600 via-indigo-600 to-gray-900">
+      <div class="container mx-auto px-4 text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold">
+          Organize Your Life with this easy-to-use app
+        </h1>
+        <p class="mt-4 text-lg md:text-2xl">
+          Manage tasks effortlessly and boost your productivity. Stay on top of
+          everything with our intuitive To-Do List.
+        </p>
+        <a
+          href="Todo.html"
+          class="mt-8 inline-block bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200"
+        >
+          Start
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+          <p>Email: <a href="mailto:ansh.grover@example.com" class="hover:underline">ansh.grover@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890" class="hover:underline">+1 234 567 890</a></p>
+          <p>Location: New Delhi, India</p>
         </div>
-        <nav class="nav-links">
+
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Follow Us</h2>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="hover:text-purple-500">Facebook</a>
+            <a href="#" class="hover:text-purple-500">Twitter</a>
+            <a href="#" class="hover:text-purple-500">Instagram</a>
+            <a href="#" class="hover:text-purple-500">LinkedIn</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Useful Links</h2>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
-            <li><a href="./pages/badges.html">Badges</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:underline">Help & Support</a></li>
           </ul>
-        </nav>
-      </div>
-    </header>
-
-    <div class="badge-grid">
-        <div class="badge-container">
-          <div class="badge">
-            <img
-              src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-              alt="Badge Image"
-            />
-            <div class="badge-details">
-              <h2 class="typingeffect">Season of AI | Beginner AI Learner</h2>
-              <p>Awarded to: <strong>hello.rajat.rajput@gmail.com</strong></p>
-              <p>
-                Issued on: <strong>Jul 28, 2024</strong> at
-                <strong>1:11 AM</strong>
-              </p>
-            </div>
-            <div class="download-card">
-              <a download href="assets/images/badge.png" class="download-button"
-                >Download Badge</a
-              >
-            </div>
-            <div class="share-section">
-              <p>Share your badge:</p>
-              <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Beginner%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Beginner%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Beginner%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="badge-container">
-          <div class="badge">
-            <img
-              src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-              alt="Badge Image"
-            />
-            <div class="badge-details">
-              <h2 class="typingeffect">Season of AI | Intermediate AI Learner</h2>
-              <p>Awarded to: <strong>example.user@example.com</strong></p>
-              <p>
-                Issued on: <strong>Sep 17, 2024</strong> at
-                <strong>3:55 PM</strong>
-              </p>
-            </div>
-            <div class="download-card">
-              <a download href="assets/images/badge.png" class="download-button"
-                >Download Badge</a
-              >
-            </div>
-            <div class="share-section">
-              <p>Share your badge:</p>
-              <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Intermediate%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="badge-container">
-          <div class="badge">
-            <img
-              src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-              alt="Badge Image"
-            />
-            <div class="badge-details">
-              <h2 class="typingeffect">Season of AI | Intermediate AI Learner</h2>
-              <p>Awarded to: <strong>example.user@example.com</strong></p>
-              <p>
-                Issued on: <strong>Sep 17, 2024</strong> at
-                <strong>3:55 PM</strong>
-              </p>
-            </div>
-            <div class="download-card">
-              <a download href="assets/images/badge.png" class="download-button"
-                >Download Badge</a
-              >
-            </div>
-            <div class="share-section">
-              <p>Share your badge:</p>
-              <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Intermediate%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="badge-container">
-          <div class="badge">
-            <img
-              src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-              alt="Badge Image"
-            />
-            <div class="badge-details">
-              <h2 class="typingeffect">Season of AI | Intermediate AI Learner</h2>
-              <p>Awarded to: <strong>example.user@example.com</strong></p>
-              <p>
-                Issued on: <strong>Sep 17, 2024</strong> at
-                <strong>3:55 PM</strong>
-              </p>
-            </div>
-            <div class="download-card">
-              <a download href="assets/images/badge.png" class="download-button"
-                >Download Badge</a
-              >
-            </div>
-            <div class="share-section">
-              <p>Share your badge:</p>
-              <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Intermediate%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="badge-container">
-          <div class="badge">
-            <img
-              src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-              alt="Badge Image"
-            />
-            <div class="badge-details">
-              <h2 class="typingeffect">Season of AI | Intermediate AI Learner</h2>
-              <p>Awarded to: <strong>example.user@example.com</strong></p>
-              <p>
-                Issued on: <strong>Sep 17, 2024</strong> at
-                <strong>3:55 PM</strong>
-              </p>
-            </div>
-            <div class="download-card">
-              <a download href="assets/images/badge.png" class="download-button"
-                >Download Badge</a
-              >
-            </div>
-            <div class="share-section">
-              <p>Share your badge:</p>
-              <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Intermediate%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Intermediate%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="badge-container">
-          <div class="badge">
-            <img
-              src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png"
-              alt="Badge Image"
-            />
-            <div class="badge-details">
-              <h2 class="typingeffect">Season of AI | Advance AI Learner</h2>
-              <p>Awarded to: <strong>example.user@example.com</strong></p>
-              <p>
-                Issued on: <strong>Dec 17, 2024</strong> at
-                <strong>8:55 PM</strong>
-              </p>
-            </div>
-            <div class="download-card">
-              <a download href="assets/images/badge.png" class="download-button"
-                >Download Badge</a
-              >
-            </div>
-            <div class="share-section">
-              <p>Share your badge:</p>
-              <a
-                href="https://x.com/intent/tweet?text=I%20earned%20the%20Season%20of%20AI%20Advance%20AI%20Learner%20Badge!%20Check%20it%20out:%20https://ai.mlsc-amity.tech%20&hashtags=AI,Badge"
-                target="_blank"
-                class="share-button twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://ai.mlsc-amity.tech&title=Advance%20AI%20Learner%20Badge&summary=I%20earned%20the%20Season%20of%20AI%20Advance%20AI%20Learner%20Badge!%20Check%20it%20out:"
-                target="_blank"
-                class="share-button linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://ai.mlsc-amity.tech"
-                target="_blank"
-                class="share-button facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
-  
-      <style>
-        .badge-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, auto);
-          gap: 10px; /* Reduced gap between cards */
-        }
-        .badge-container {
-          background: linear-gradient(
-            35deg,
-            rgba(10, 151, 207, 0.9) 50%,
-            rgba(15, 61, 214, 0.9) 50%
-          );
-          padding: 5px;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          transform: scale(0.7); /* Further reduce the size of the card */
-        }
-      </style>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-text" style="text-align: center">
-          <p>
-            Follow us on
-            <a href="https://github.com/rajatuiwebdev/badge-website">Github</a>
-            |
-            <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
-          </p>
-          <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
-        </div>
+      <div class="mt-8 text-center border-t border-gray-600 pt-4">
+        <p>&copy; 2024 Made with &#10084; by Ansh Grover. All rights reserved.</p>
       </div>
     </footer>
-
-    <!-- QRious Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-    <!-- Typing effect script -->
-    <script src="js/typing.js"></script>
-
-    <!-- Typing effect for badge title -->
-    <script src="js/typing-badge-title.js"></script>
   </body>
 </html>
