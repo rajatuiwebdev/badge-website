@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Badge Website</title>
-    <link rel="stylesheet" href="../css/about.css" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
@@ -12,6 +11,150 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="../Favicon/favicon.ico?v=2">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: linear-gradient(to right, #f7f7f7, #eaeaea);
+            padding: 0;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .logo h1 {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin: 0 15px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links ul li a:hover {
+            color: #fda085;
+        }
+
+       
+        .about-section {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 2rem auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-text a {
+            color: #fda085;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-text a:hover {
+            color: white;
+        }
+
+        .footer-text .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .footer-text .social-icons a:hover {
+            color: #fda085;
+        }
+
+       
+        @media only screen and (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-links ul li {
+                margin: 10px 0;
+            }
+
+            .about-section {
+                width: 90%;
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +163,6 @@
             <div class="logo">
                 <img src="../Favicon/favicon-32x32.png" alt="Logo" />
                 <a href="/"><h1>Badge Website</h1></a>
-                
             </div>
             <nav class="nav-links" aria-label="Main navigation">
                 <ul>
@@ -42,11 +184,15 @@
 
     <footer>
         <div class="footer-text">
-            <p>
-                Follow us on
-                <a href="https://github.com/rajatuiwebdev/badge-website" aria-label="GitHub Profile">Github</a> |
-                <a href="https://www.linkedin.com/in/rajatrajput2004/" aria-label="LinkedIn Profile">LinkedIn</a>
-            </p>
+            <p>Follow us on</p>
+            <div class="social-icons">
+                <a href="https://github.com/rajatuiwebdev/badge-website" aria-label="GitHub Profile">  
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rajatrajput2004/" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
             <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
         </div>
     </footer>
