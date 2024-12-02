@@ -1,38 +1,27 @@
-.about-section {
-    margin-top: 70px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, rgba(28, 31, 36, 0.8), rgba(45, 59, 69, 0.8), rgba(0, 0, 0, 0.8)); 
-    color: #dfe1e5; 
-    text-align: center;
-    height: 82vh;  
-    background-repeat: no-repeat;
-    background-size: cover; 
-    position: relative; 
-    overflow: hidden; 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.badge {
+    background-color: #007bff; /* Badge background color */
+    color: white;              /* Text color */
+    padding: 20px;
+    border-radius: 5px;       /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center;        /* Center text */
+    width: 250px;             /* Fixed width for consistency */
 }
 
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+.badge-title {
+    font-size: 20px;          /* Title font size */
+    font-weight: bold;        /* Bold title */
 }
 
-.about-section a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
-    color: white; 
-    text-decoration: none;
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
-}
-
-.about-section a:hover {
-    background-color: #0056b3; 
+.badge-description {
+    font-size: 14px;          /* Description font size */
 }
