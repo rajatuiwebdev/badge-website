@@ -35,6 +35,18 @@ header {
   padding: 20px; /* Padding around the header */
 }
 
+.logo img {
+  width: auto; /* Allow automatic width */
+  max-width: 100%; /* Ensure it doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 60px; /* Set a max height for better layout */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
 h1 {
   font-size: 24px; /* Font size for header title */
 }
