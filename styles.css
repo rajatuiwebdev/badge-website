@@ -118,20 +118,34 @@ body {
 
 }
 
-.badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.badge-card {
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  height: calc(100vh - 60px);
+  width: 90%; /* Reduced width */
+  display: grid;
+  place-items: center;
+  max-width: 220px; /* Reduced max-width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px; /* Adjusted padding for smaller size */
+  transition: transform 0.3s ease;
 }
 
-.badge img {
-  width: 250px;
-   height: 210px;  /* reduce the height of badge image for better user experience */
-  transition: transform 0.3s ease; /* Smooth transition */
+.badge-card img {
+  max-width: 80px; /* Reduced image size */
+  margin-bottom: 10px; /* Adjusted spacing */
+}
+
+.badge-card h3 {
+  font-size: 1.1em; /* Reduced heading size */
+  color: #3a3a3a;
+  margin-bottom: 8px; /* Adjusted spacing */
+}
+
+.badge-card p {
+  font-size: 0.85em; /* Reduced paragraph size */
+  color: #2b2b2b;
 }
 
 
