@@ -1,109 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Badge Website</title>
-
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../css/contact.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../Favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../Favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../Favicon/favicon-16x16.png"
-    />
+    <title>Badge Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="../Favicon/favicon.ico?v=2" />
-  </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-  <body>
+        header {
+            background: #0a97cf;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .search-bar-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #search-bar {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .badge-container {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: white;
+            width: 200px;
+            text-align: center;
+        }
+
+        .badge img {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #0a97cf;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0d3dd6;
+        }
+
+        #success-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+        }
+
+        footer {
+            background: #0a97cf;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
     <header>
-      <div class="header-container">
-        <div class="logo">
-          <img src="../Favicon/favicon-32x32.png" alt="Logo" />
-          <a href="/"><h1>Badge Website</h1></a>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../Favicon/favicon-32x32.png" alt="Logo" />
+                <h1>Badge Website</h1>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./badges.html">Badges</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-links">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./badges.html">Badges</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
     <main>
-      <div class="container">
-        <form id="contact" action="#" method="post">
-          <h3>Contact Us</h3>
-          <fieldset>
-            <label for="name">Name</label>
-            <input
-              placeholder="Enter your name"
-              type="text"
-              name="name"
-              tabindex="1"
-              required
-              autofocus
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Email</label>
-            <input
-              placeholder="Your Email Address"
-              type="email"
-              name="email"
-              tabindex="2"
-              required
-            />
-          </fieldset>
-          <fieldset>
-            <label for="message">Message</label>
-            <textarea
-              placeholder="Type your message here...."
-              name="message"
-              tabindex="5"
-              required
-            ></textarea>
-          </fieldset>
-          <button
-            name="submit"
-            type="submit"
-            id="contact-submit"
-            data-submit="...Sending"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </main>
+        <div class="container">
+            <h3>Search for Badges</h3>
+            <div class="search-bar-container">
+                <input
+                    type="text"
+                    id="search-bar"
+                    placeholder="Search for badges..."
+                    onkeyup="filterBadges()"
+                />
+            </div>
 
+            <h3>Available Badges</h3>
+            <div class="badge-grid" id="badge-grid">
+                <div class="badge-container">
+                    <div class="badge">
+                        <img src="https://ai.mlsc-amity.tech/dist/imgdb/newcomer.png" alt="Badge Image" />
+                        <div class="badge-details">
+                            <h2>Season of AI | Beginner AI Learner</h2>
+                            <p>Awarded to: <strong>hello.rajat.rajput2004@gmail.com</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more badge-container divs as needed -->
+            </div>
+
+            <h3>Contact Us for Your Badge</h3>
+            <form id="contact" action="#" method="post" onsubmit="handleFormSubmit(event)">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    />
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    />
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="success-message">
+                <p>Thank you for submitting your details. Your badge will be sent soon!</p>
+            </div>
+        </div>
+    </main>
     <footer>
-      <div class="footer-text">
-        <p>
-          Follow us on
-          <a href="https://github.com/rajatuiwebdev/badge-website">Github</a> |
-          <a href="https://www.linkedin.com/in/rajatrajput2004/">LinkedIn</a>
-        </p>
-        <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
-      </div>
+        <div class="footer-text">
+            <p>
+                Follow us on
+                <a href="https://github.com/rajatuiwebdev/badge-website" style="color: white;">Github</a> |
+                <a href="https://www.linkedin.com/in/rajatrajput2004/" style="color: white;">LinkedIn</a>
+            </p>
+            <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
+        </div>
     </footer>
-  </body>
+    <script>
+        function filterBadges() {
+            const input = document.getElementById('search-bar').value.toLowerCase();
+            const badges = document.querySelectorAll('.badge-container');
+
+            badges.forEach((badge) => {
+                const badgeText = badge.textContent.toLowerCase();
+                badge.style.display = badgeText.includes(input) ? '' : 'none';
+            });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Display success message
+            document.getElementById('success-message').style.display = 'block';
+
+            // Optional: Reset form fields
+            document.getElementById('contact').reset();
+        }
+    </script>
+</body>
 </html>
