@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Badge Website</title>
-    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../styles.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
@@ -33,24 +34,31 @@
         </div>
     </header>
 
-    <section class="about-section" aria-labelledby="about-us">
-        <h2 id="about-us">About Us</h2>
-        <div class="about-content">
-            <p>Welcome to Badge Website, where we celebrate achievements and empower individuals to showcase their skills and growth.</p>
-            <p>Our platform offers a unique space to earn, display, and share digital badges that recognize your hard work and dedication.</p>
-            <p>Join our community of learners and achievers, and inspire others by sharing your accomplishments in a vibrant and supportive environment.</p>
+    <section>
+        <div class="container">
+            <div class="form-container">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <input type="text" id="signup-username" placeholder="Username" required />
+                    <input type="email" id="signup-email" placeholder="Email" required />
+                    <input type="password" id="signup-password" placeholder="Password" required />
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Log In</a></p>
+            </div>
+
+            <div class="form-container hidden" id="login-container">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder="Username" required />
+                    <input type="password" id="login-password" placeholder="Password" required />
+                    <button type="submit">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-text">
-            <p>
-                Follow us on
-                <a href="https://github.com/rajatuiwebdev/badge-website" aria-label="GitHub Profile">Github</a> |
-                <a href="https://www.linkedin.com/in/rajatrajput2004/" aria-label="LinkedIn Profile">LinkedIn</a>
-            </p>
-            <p>&copy; 2024 Rajat Rajput | All rights reserved</p>
-        </div>
-    </footer>
+    <script src="../js/login.js"></script>
 </body>
 </html>
