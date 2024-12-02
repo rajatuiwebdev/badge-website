@@ -117,22 +117,40 @@ body {
   margin: 0; /* Remove default margin */
 
 }
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
 
-.badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  height: calc(100vh - 60px);
+.badge-container {
+  background: linear-gradient(35deg, rgba(10, 151, 207, 0.9) 50%, rgba(15, 61, 214, 0.9) 50%);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(0.5);
+  transition: transform 0.2s ease;
+}
+
+.badge-container:hover {
+  transform: scale(0.55);
 }
 
 .badge img {
-  width: 250px;
-   height: 210px;  /* reduce the height of badge image for better user experience */
-  transition: transform 0.3s ease; /* Smooth transition */
+  max-width: 100px;
+  height: auto;
 }
+
+.badge-details h2 {
+  font-size: 1.2rem;
+}
+
+.download-button {
+  padding: 8px 12px;
+}
+
 
 
 /* HEADER CSS */
