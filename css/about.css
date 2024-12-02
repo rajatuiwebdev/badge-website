@@ -1,38 +1,37 @@
-.about-section {
-    margin-top: 70px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, rgba(28, 31, 36, 0.8), rgba(45, 59, 69, 0.8), rgba(0, 0, 0, 0.8)); 
-    color: #dfe1e5; 
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 10px;
     text-align: center;
-    height: 82vh;  
-    background-repeat: no-repeat;
-    background-size: cover; 
-    position: relative; 
-    overflow: hidden; 
 }
-
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.navbar ul {
+    list-style: none;
+    padding: 0;
 }
-
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+.navbar li {
+    display: inline;
+    margin: 0 15px;
 }
-
-.about-section a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
-    color: white; 
+.navbar a {
+    color: white;
     text-decoration: none;
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
+    font-size: 18px;
+}
+.navbar a:hover {
+    text-decoration: underline;
 }
 
-.about-section a:hover {
-    background-color: #0056b3; 
+/* Contact List Styling */
+.contact-list {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+.contact-list h2 {
+    margin-bottom: 10px;
+}
+.contact-list ul {
+    list-style: none;
+    padding: 0;
 }
