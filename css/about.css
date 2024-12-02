@@ -1,38 +1,32 @@
-.about-section {
-    margin-top: 70px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, rgba(28, 31, 36, 0.8), rgba(45, 59, 69, 0.8), rgba(0, 0, 0, 0.8)); 
-    color: #dfe1e5; 
-    text-align: center;
-    height: 82vh;  
-    background-repeat: no-repeat;
-    background-size: cover; 
-    position: relative; 
-    overflow: hidden; 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+nav {
+    background-color: #007bff;
+    padding: 10px;
 }
 
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.about-section a {
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
-    color: white; 
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
 }
 
-.about-section a:hover {
-    background-color: #0056b3; 
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
 }
+
